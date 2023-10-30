@@ -1,4 +1,4 @@
-package dictionary.dictionary_cmp;
+package Dictionary.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
