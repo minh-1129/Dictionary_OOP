@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0E68C;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.BaseSceneController">
+   <children>
+      <AnchorPane layoutX="106.0" layoutY="15.0" prefHeight="371.0" prefWidth="472.0" style="-fx-background-color: #FFE4B5;">
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="17.0" layoutY="13.0" prefHeight="371.0" prefWidth="65.0" style="-fx-background-color: #FFE4B5;">
+         <children>
+            <Button fx:id="mSearch" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Search" />
+            <Button fx:id="mTranslate" layoutY="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Translate" />
+            <Button fx:id="mGame" layoutX="1.0" layoutY="170.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Game" />
+            <Button fx:id="mSetting" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Setting" />
+            <Button fx:id="mExit" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Exit" />
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.1811949461698532" green="0.2017543911933899" blue="0.025530647486448288" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
