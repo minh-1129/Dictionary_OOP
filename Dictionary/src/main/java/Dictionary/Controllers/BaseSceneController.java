@@ -19,14 +19,32 @@ public class BaseSceneController implements Initializable {
     private Button mSetting, mSearch, mTranslate, mGame, mExit;
 
     @FXML
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    private AnchorPane mainLayout;
 
+    @FXML
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        showComponent("/View/SearchScene.fxml");
+        mSearch.setOnAction(event -> showComponent("/View/SearchScene.fxml"));
+
+        mTranslate.setOnAction(event -> showComponent("/View/TranslateScene.fxml"));
+
+        mGame.setOnAction(event -> showComponent("/View/GameScene.fxml"));
+        mSetting.setOnAction(event -> showComponent("/View/SettingScene.fxml"));
+        mExit.setOnAction(event -> showComponent("/View/ExitScene.fxml"));
     }
 
+    public void setNode(Node node) {
+        mainLayout.getChildren().clear();
+        mainLayout.getChildren().add(node);
+    }
 
     @FXML
     public void showComponent(String path) {
-
+        try {
+            AnchorPane component = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(path)));
+            setNode(component);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
 }
