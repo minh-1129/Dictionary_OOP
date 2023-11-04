@@ -96,6 +96,8 @@ public class Word {
         this.meaning = meaning;
     }
 
+    public Word() {}
+
     @Override
     public String toString() {
         return "This word is " + wordTarget + " " + type + " " + meaning + " " + pronunciation + " "
