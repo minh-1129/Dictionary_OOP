@@ -1,6 +1,7 @@
 module com.example.dictionary {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens Dictionary to javafx.fxml;
