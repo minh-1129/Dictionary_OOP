@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -16,10 +17,10 @@ import java.util.ResourceBundle;
 
 public class BaseSceneController implements Initializable {
     @FXML
-    private Button mSetting, mSearch, mTranslate, mGame, mExit;
+    private Button mSetting, mSearch, mTranslate, mGame, mAdd;
 
     @FXML
-    private AnchorPane mainLayout;
+    private VBox mainLayout;
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -30,7 +31,7 @@ public class BaseSceneController implements Initializable {
 
         mGame.setOnAction(event -> showComponent("/View/GameScene.fxml"));
         mSetting.setOnAction(event -> showComponent("/View/SettingScene.fxml"));
-        mExit.setOnAction(event -> showComponent("/View/ExitScene.fxml"));
+        mAdd.setOnAction(event -> showComponent("/View/ExitScene.fxml"));
     }
 
     public void setNode(Node node) {

@@ -5,37 +5,102 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="676.0" style="-fx-background-color: #F0E68C;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.BaseSceneController">
+<AnchorPane prefHeight="500.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.BaseSceneController">
    <children>
-      <AnchorPane fx:id="mainLayout" layoutX="109.0" layoutY="26.0" prefHeight="400.0" prefWidth="544.0" style="-fx-background-color: #FFE4B5;">
-         <effect>
-            <DropShadow />
-         </effect>
-      </AnchorPane>
-      <AnchorPane layoutX="-1.0" layoutY="-2.0" prefHeight="451.0" prefWidth="67.0" style="-fx-background-color: #FFE4B5;">
-         <children>
-            <Button fx:id="mSearch" layoutY="25.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="41.0" style="-fx-background-color: #FFE4B5;">
-               <graphic>
-                  <ImageView fitHeight="49.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Image/searching.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button fx:id="mTranslate" layoutY="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Translate" />
-            <Button fx:id="mGame" layoutX="1.0" layoutY="170.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Game" />
-            <Button fx:id="mSetting" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Setting" />
-            <Button fx:id="mExit" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Exit" />
-         </children>
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color red="0.1811949461698532" green="0.2017543911933899" blue="0.025530647486448288" />
-               </color>
-            </DropShadow>
-         </effect>
-      </AnchorPane>
+      <BorderPane prefHeight="500.0" prefWidth="733.0">
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="361.0" prefWidth="57.0" style="-fx-background-color: #112E69;" BorderPane.alignment="CENTER">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <AnchorPane prefHeight="84.0" prefWidth="57.0">
+                     <children>
+                        <ImageView fitHeight="46.0" fitWidth="44.0" layoutX="7.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/tilte.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="83.0" prefWidth="57.0">
+                     <children>
+                        <Button fx:id="mSearch" layoutX="8.0" layoutY="23.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: #112E69;">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="83.0" prefWidth="57.0">
+                     <children>
+                        <Button fx:id="mAdd" layoutY="13.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="57.0" style="-fx-background-color: #112E69;">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="83.0" prefWidth="57.0">
+                     <children>
+                        <Button fx:id="mTranslate" layoutX="9.0" layoutY="23.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: #112E69;">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/translate.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="83.0" prefWidth="57.0">
+                     <children>
+                        <Button fx:id="mGame" layoutX="8.0" layoutY="23.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: #112E69;">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/game.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="84.0" prefWidth="57.0">
+                     <children>
+                        <Button fx:id="mSetting" layoutX="8.0" layoutY="25.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" style="-fx-background-color: #112E69;">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/setting.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox fx:id="mainLayout" prefHeight="500.0" prefWidth="690.0" style="-fx-background-color: #F3F2B0;" BorderPane.alignment="CENTER">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </VBox>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>
