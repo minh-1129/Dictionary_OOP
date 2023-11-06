@@ -20,7 +20,7 @@ public class BaseSceneController implements Initializable {
     private Button mSetting, mSearch, mTranslate, mGame, mAdd;
 
     @FXML
-    private VBox mainLayout;
+    private AnchorPane mainLayout;
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
