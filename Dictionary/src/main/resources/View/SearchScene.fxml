@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -7,19 +8,23 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.SearchSceneController">
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.SearchSceneController">
    <children>
       <AnchorPane layoutX="22.0" layoutY="22.0" prefHeight="35.0" prefWidth="265.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 1cm;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="25.0">
          <children>
-            <ImageView fitHeight="35.0" fitWidth="39.0" layoutX="230.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Image/searchbar.png" />
-               </image>
-            </ImageView>
-            <TextField layoutX="14.0" prefHeight="35.0" prefWidth="217.0" style="-fx-border-color: #FFFEFE;" AnchorPane.topAnchor="0.0" />
+            <TextField layoutX="14.0" prefHeight="35.0" prefWidth="217.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button layoutX="221.0" layoutY="-1.0" minWidth="40.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: #FFFEFE;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/searchbar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
-      <ListView layoutX="25.0" layoutY="80.0" prefHeight="200.0" prefWidth="265.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="100.0" />
-      <TextArea layoutX="400.0" layoutY="85.0" prefHeight="390.0" prefWidth="265.0" style="-fx-background-color: #FFFEFE;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="100.0" />
+      <ListView layoutX="25.0" layoutY="80.0" prefHeight="200.0" prefWidth="265.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="360.0" AnchorPane.topAnchor="100.0" />
+      <TextArea layoutX="400.0" layoutY="85.0" prefHeight="390.0" prefWidth="265.0" style="-fx-background-color: #FFFEFE;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="360.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="100.0" />
    </children>
 </AnchorPane>

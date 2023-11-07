@@ -31,7 +31,7 @@ public class BaseSceneController implements Initializable {
 
         mGame.setOnAction(event -> showComponent("/View/GameScene.fxml"));
         mSetting.setOnAction(event -> showComponent("/View/SettingScene.fxml"));
-        mAdd.setOnAction(event -> showComponent("/View/ExitScene.fxml"));
+        mAdd.setOnAction(event -> showComponent("/View/AddWordScene.fxml"));
     }
 
     public void setNode(Node node) {
