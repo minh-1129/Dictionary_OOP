@@ -55,5 +55,11 @@ public class TextToSpeech {
     InputStream soundStream = audio.getAudio(text, "en");
     audio.play(soundStream);
   }
-  
+
+  public static void playSound(String text, String language) throws IOException, JavaLayerException {
+    TextToSpeech audio = TextToSpeech.getInstance();
+    InputStream soundStream = audio.getAudio(text, language);
+    audio.play(soundStream);
+  }
+
 }

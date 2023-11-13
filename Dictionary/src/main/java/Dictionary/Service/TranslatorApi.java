@@ -8,7 +8,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class TranslatorApi {
-  private static String translate(String langFrom, String langTo, String text) throws IOException {
+  public static String translate(String langFrom, String langTo, String text) throws IOException {
     String urlStr = "https://script.google.com/macros/s/AKfycbx_IL9PUcJS4FBHRe5Chceb7HiaxP8NFTHIEnlnVHoMoVNkUK_bsvEjotvUggfritkfMA/exec" +
         "?q=" + URLEncoder.encode(text, "UTF-8") +
         "&target=" + langTo +
