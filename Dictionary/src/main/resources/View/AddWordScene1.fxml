@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.AddWordController">
    <children>
       <AnchorPane layoutX="350.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 1cm; -fx-background-color: #FFFEFE;" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">

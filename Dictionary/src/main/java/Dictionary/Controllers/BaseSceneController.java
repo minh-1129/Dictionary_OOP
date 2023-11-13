@@ -5,10 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
-import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
@@ -31,7 +28,7 @@ public class BaseSceneController implements Initializable {
 
         mGame.setOnAction(event -> showComponent("/View/GameScene.fxml"));
         mSetting.setOnAction(event -> showComponent("/View/SettingScene.fxml"));
-        mAdd.setOnAction(event -> showComponent("/View/AddWordScene.fxml"));
+        mAdd.setOnAction(event -> showComponent("/View/AddWordScene1.fxml"));
     }
 
     public void setNode(Node node) {

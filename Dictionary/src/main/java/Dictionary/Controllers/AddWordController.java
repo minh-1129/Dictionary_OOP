@@ -7,4 +7,6 @@ public class AddWordController {
     @FXML
     private TextField mWordTarget, mTpye, mMeaning, mPronunciation, mExample, mSynonums, mAntonums;
 
+
+
 }
