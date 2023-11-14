@@ -1,16 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.TranslateSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="780.0" style="-fx-background-color: #FDFFD0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.TranslateSceneController">
    <children>
-      <Text layoutX="214.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Translate">
-         <font>
-            <Font size="43.0" />
-         </font>
-      </Text>
+      <AnchorPane layoutX="93.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="640.0" style="-fx-background-color: #5A48D9; -fx-background-radius: 30px;" AnchorPane.bottomAnchor="487.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="33.0">
+         <children>
+            <ComboBox fx:id="targetLanguage" layoutX="560.0" layoutY="18.0" onAction="#translateTextInOutput" prefWidth="150.0" promptText="Target Language" style="-fx-background-color: #5A48D9; -fx-background-radius: 30px; -fx-text-fill: #FFFFFF;" AnchorPane.bottomAnchor="12.5" AnchorPane.leftAnchor="410.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="12.5" />
+            <ComboBox fx:id="sourceLanguage" layoutX="102.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#translateTextInInput" prefWidth="150.0" promptText="Source Language" style="-fx-background-color: #5A48D9; -fx-background-radius: 30px; -fx-text-fill: #FFFFFF;" AnchorPane.bottomAnchor="12.5" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="410.0" AnchorPane.topAnchor="12.5" />
+            <ImageView fx:id="btnSwap" fitHeight="35.0" fitWidth="35.0" layoutX="292.0" layoutY="8.0" onMouseClicked="#swap" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.5" AnchorPane.leftAnchor="302.5" AnchorPane.rightAnchor="302.5" AnchorPane.topAnchor="7.5">
+               <image>
+                  <Image url="@../Image/swap.png" />
+               </image>
+            </ImageView>
+
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="514.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30px;" AnchorPane.bottomAnchor="43.5" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="126.5">
+         <children>
+            <TextArea fx:id="outputText" layoutX="-5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" style="-fx-background-radius: 30px; -fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font></TextArea>
+            <ImageView fx:id="speakerTextInOutput" fitHeight="35.0" fitWidth="35.0" layoutX="36.0" layoutY="200.0" onMouseClicked="#speakTextInOutput" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="360.0">
+               <image>
+                  <Image url="@../Image/speaker.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="50.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30px;" AnchorPane.bottomAnchor="43.5" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="126.5">
+         <children>
+            <TextArea fx:id="inputText" layoutX="45.0" layoutY="96.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#translate" prefHeight="300.0" prefWidth="310.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 30px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextArea>
+            <ImageView fx:id="speakerTextInInput" fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="351.0" onMouseClicked="#speakTextInInput" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="360.0">
+               <image>
+                  <Image url="@../Image/speaker.png" />
+               </image>
+            </ImageView>
+          
+         </children>
+      </AnchorPane>
+
    </children>
 </AnchorPane>

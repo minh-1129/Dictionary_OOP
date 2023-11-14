@@ -3,9 +3,9 @@ module com.example.dictionary {
     requires javafx.fxml;
     requires javafx.web;
     requires java.sql;
+  requires jlayer;
 
-
-    opens Dictionary to javafx.fxml;
+  opens Dictionary to javafx.fxml;
     exports Dictionary;
     exports Dictionary.Controllers;
     opens Dictionary.Controllers to javafx.fxml;
