@@ -37,7 +37,7 @@
       <HBox layoutX="287.0" layoutY="21.0" prefHeight="40.0" prefWidth="477.0">
          <children>
             <TextArea prefHeight="46.0" prefWidth="303.0" />
-            <Button id="button1" mnemonicParsing="false" prefHeight="43.0" prefWidth="53.0" style="-fx-background-color: #FDFFD0;">
+            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="53.0" style="-fx-background-color: #FDFFD0;">
                <graphic>
                   <ImageView fitHeight="43.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
