@@ -28,7 +28,7 @@ public class BaseSceneController implements Initializable {
 
         mGame.setOnAction(event -> showComponent("/View/GameScene.fxml"));
         mSetting.setOnAction(event -> showComponent("/View/SettingScene.fxml"));
-        mAdd.setOnAction(event -> showComponent("/View/AddWordScene1.fxml"));
+        mAdd.setOnAction(event -> showComponentAdd());
     }
 
     public void setNode(Node node) {
@@ -43,6 +43,14 @@ public class BaseSceneController implements Initializable {
             setNode(component);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+    @FXML
+    public void showComponentAdd() {
+        if(SettingSceneController.getTransMode() == SettingSceneController.ENEN) {
+            showComponent("/View/AddWordSceneEn.fxml");
+        } else {
+
         }
     }
 }

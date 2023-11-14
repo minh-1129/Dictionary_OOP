@@ -111,6 +111,29 @@ public class EnViDictionary extends DatabaseDictionary {
         }
     }
 
+    public boolean update(String target, String pronunciation, String html, String description) {
+        String SQL_QUERY = "UPDATE av SET pronounce = ?, html = ?, description = ? WHERE word = ?";
+        try {
+            PreparedStatement ps = connection.prepareStatement(SQL_QUERY);
+            ps.setString(1, pronunciation);
+            ps.setString(2, html);
+            ps.setString(3, description);
+            ps.setString(4, target);
+            try {
+                int id = ps.executeUpdate();
+                if (id == 0) {
+                    return false;
+                }
+            } finally {
+                close(ps);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
     public boolean updatePronunciation(String target, String pronunciation) {
         String SQL_QUERY = "UPDATE av SET pronounce = ? WHERE word = ?";
         try {
