@@ -37,7 +37,7 @@
         </AnchorPane>
         <AnchorPane layoutX="68.0" layoutY="348.0" prefHeight="137.0" prefWidth="200.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="300.0">
             <children>
-                <TextArea fx:id="mMeaning" layoutX="53.0" layoutY="19.0" prefHeight="137.0" prefWidth="200.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+                <TextArea fx:id="mDescription" layoutX="53.0" layoutY="19.0" prefHeight="137.0" prefWidth="200.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
                 <Label layoutX="15.0" layoutY="10.0" prefHeight="33.0" prefWidth="290.0" text="Description">
                     <font>
                         <Font size="22.0" />
@@ -47,7 +47,7 @@
         </AnchorPane>
         <AnchorPane layoutX="418.0" layoutY="350.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="120.0">
             <children>
-                <TextArea fx:id="mExample" layoutX="39.0" layoutY="35.0" prefHeight="185.0" prefWidth="310.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+                <TextArea fx:id="htmlEditor" layoutX="39.0" layoutY="35.0" prefHeight="185.0" prefWidth="310.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
                 <Label layoutX="15.0" layoutY="9.0" prefHeight="40.0" prefWidth="290.0" text="HTML">
                     <font>
                         <Font size="22.0" />
