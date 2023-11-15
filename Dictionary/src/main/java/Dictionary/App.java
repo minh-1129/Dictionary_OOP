@@ -6,11 +6,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import Dictionary.Models.*;
 
-import java.io.IOException;
 
 public class App extends Application {
-    public static EnEnDictionary enenDictionary = new EnEnDictionary();
-    public static EnViDictionary enviDictionary = new EnViDictionary();
+    public static EnEnDictionary enenDictionary = EnEnDictionary.getInstance();
+    public static EnViDictionary enviDictionary = EnViDictionary.getInstance();
     @Override
     public void start(Stage stage) {
         try {

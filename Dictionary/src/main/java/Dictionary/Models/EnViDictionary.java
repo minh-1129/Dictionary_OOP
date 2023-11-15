@@ -9,8 +9,19 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 
 public class EnViDictionary extends DatabaseDictionary {
+
+    private static EnViDictionary instance;
     protected String databaseURL = "jdbc:sqlite:Dictionary\\src\\vietData.db";
     protected Connection connection = null;
+
+    private EnViDictionary() {}
+
+    public static EnViDictionary getInstance() {
+        if (instance == null) {
+            instance = new EnViDictionary();
+        }
+        return instance;
+    }
 
     @Override
     public void connectToDatabase() {
