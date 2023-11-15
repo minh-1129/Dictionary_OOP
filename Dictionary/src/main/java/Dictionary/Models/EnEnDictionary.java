@@ -9,6 +9,17 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 
 public class EnEnDictionary extends DatabaseDictionary{
+
+    private static EnEnDictionary instance;
+
+    private  EnEnDictionary(){}
+
+    public static EnEnDictionary getInstance() {
+        if(instance == null) {
+            instance = new EnEnDictionary();
+        }
+        return instance;
+    }
     protected String databaseURL = "jdbc:sqlite:Dictionary\\src\\engData.db";
     protected Connection connection = null;
 
