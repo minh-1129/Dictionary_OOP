@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
 
 public class BaseSceneController implements Initializable {
     @FXML
-    private Button mSetting, mSearch, mTranslate, mGame, mAdd;
+    private Button mSetting, mSearch, mTranslate, mGame, mAdd, mSynonym;
 
     @FXML
     private AnchorPane mainLayout;
@@ -28,6 +28,7 @@ public class BaseSceneController implements Initializable {
 
         mGame.setOnAction(event -> showComponent("/View/GameScene.fxml"));
         mSetting.setOnAction(event -> showComponent("/View/SettingScene.fxml"));
+        mSynonym.setOnAction(event -> showComponent("/View/SynonymScene.fxml"));
         mAdd.setOnAction(event -> showComponentAdd());
     }
 
