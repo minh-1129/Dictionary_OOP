@@ -9,8 +9,19 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 
 public class EnViDictionary extends DatabaseDictionary {
+
+    private static EnViDictionary instance;
     protected String databaseURL = "jdbc:sqlite:Dictionary\\src\\vietData.db";
     protected Connection connection = null;
+
+    private EnViDictionary() {}
+
+    public static EnViDictionary getInstance() {
+        if (instance == null) {
+            instance = new EnViDictionary();
+        }
+        return instance;
+    }
 
     @Override
     public void connectToDatabase() {
@@ -111,7 +122,7 @@ public class EnViDictionary extends DatabaseDictionary {
         }
     }
 
-    public boolean update(String target, String pronunciation, String html, String description) {
+    public boolean update(String target, String description, String html, String pronunciation) {
         String SQL_QUERY = "UPDATE av SET pronounce = ?, html = ?, description = ? WHERE word = ?";
         try {
             PreparedStatement ps = connection.prepareStatement(SQL_QUERY);

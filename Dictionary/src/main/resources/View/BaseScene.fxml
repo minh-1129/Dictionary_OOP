@@ -77,6 +77,18 @@
                               <Font size="15.0" />
                            </font>
                         </Button>
+                        <Button fx:id="mQuiz" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #112E69;" text="   Quiz          " textFill="#f6f0f0">
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/quiz.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
                         <Button fx:id="mSetting" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #112E69;" text="    Setting     " textFill="#f6f0f0">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">

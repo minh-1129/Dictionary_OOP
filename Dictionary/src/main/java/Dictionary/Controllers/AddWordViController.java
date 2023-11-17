@@ -3,6 +3,8 @@ package Dictionary.Controllers;
 import Dictionary.Helpers.StringUtils;
 import Dictionary.Models.EnViWord;
 import Dictionary.Models.EnViDictionary;
+
+import static Dictionary.App.enenDictionary;
 import static Dictionary.App.enviDictionary;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -40,7 +42,6 @@ public class AddWordViController {
             reset();
             return false;
         }
-        word = StringUtils.normalizeEnEnString(word);
         EnViWord res = enviDictionary.lookupWord(word);
         if (res == null) {
             reset();
@@ -60,14 +61,34 @@ public class AddWordViController {
         String pronunciation = mPronunciation.getText();
         String description = mDescription.getText();
 
-        byte[] ptext = htmlEditor.getHtmlText().getBytes(StandardCharsets.ISO_8859_1);
+        byte[] ptext = htmlEditor.getHtmlText().getBytes(StandardCharsets.UTF_8);
         String html = new String(ptext, StandardCharsets.UTF_8);
-        html = html.replace("<html dir=\"ltr\"><head></head><body contenteditable=\"true\">", "");
-        html = html.replace("</body></html>", "");
-        html = html.replace("\"", "'");
+        System.out.println(html);
 
-        if (enviDictionary.update(word, pronunciation, html, description)) {
-
+        if (word.isBlank() || word.isEmpty()) {
+            alert.setTitle("Warning");
+            alert.setContentText("Cannot add empty word !");
+            alert.showAndWait();
+        } else if (description.isBlank() || description.isEmpty()) {
+            alert.setTitle("Warning");
+            alert.setContentText("Please type in description for word !");
+            alert.showAndWait();
+        } else {
+            if (findIfInDatabase()) {
+                enviDictionary.update(word, description, html, pronunciation);
+                alert.setTitle("Success");
+                alert.setContentText("Your word: " + word + " has been updated");
+                alert.showAndWait();
+                reset();
+                mWordTarget.setText("");
+            }
+            else if (enviDictionary.insertWord(word, description, html, pronunciation)) {
+                alert.setTitle("Success");
+                alert.setContentText("Your word: " + word + " has been added");
+                alert.showAndWait();
+                reset();
+                mWordTarget.setText("");
+            }
         }
     }
 
