@@ -11,6 +11,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Font;
 import javafx.scene.web.WebView;
 
@@ -31,11 +33,17 @@ public class SearchSceneController implements Initializable {
 
     private int lastIndex = 0;
     private String lastLookupWord;
-    @FXML private TextField searchBox;
-    @FXML private ListView<String> searchResultsListView;
-    @FXML private WebView showWeb;
-    @FXML private Button deleteButton;
-    @FXML private Button pronounceButton;
+    @FXML
+    private Button deleteButton;
+    @FXML
+    private Button pronounceButton;
+    @FXML
+    private TextField searchBox;
+    @FXML
+    private ListView<String> searchResultsListView;
+    @FXML
+    private WebView showWeb;
+
 
 
     @FXML
@@ -116,21 +124,14 @@ public class SearchSceneController implements Initializable {
             System.out.println("TransMode not found in lookup !!");
         }
     }
+
     @FXML
-    public void selectWord(KeyEvent e) {
-        if (searchResultsListView.getSelectionModel().getSelectedIndices().isEmpty()) {
-            return;
-        }
-        if (e.getCode() == KeyCode.ENTER) {
+    public void clickSelectWord(MouseEvent mouseEvent) {
+        if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
             String target = searchResultsListView.getSelectionModel().getSelectedItem();
             searchBox.setText(target);
             lookUpWord();
-        } else if (e.getCode() == KeyCode.UP) {
-            if (searchResultsListView.getSelectionModel().getSelectedIndex() == 0 && lastIndex == 0) {
-                searchBox.requestFocus();
-            }
         }
-        lastIndex = searchResultsListView.getSelectionModel().getSelectedIndex();
     }
 
     @FXML
@@ -187,8 +188,7 @@ public class SearchSceneController implements Initializable {
                         } else {
                             Alert alert1 = new Alert(Alert.AlertType.ERROR);
                             alert1.setTitle("Lỗi");
-                            alert1.setContentText(
-                                    "Không tồn tại từ `" + lastLookupWord + "` trong từ điển Anh-Việt để xóa!");
+                            alert1.setContentText("Không tồn tại từ `" + lastLookupWord + "` trong từ điển Anh-Việt để xóa!");
                             alert1.show();
                         }
                     }
@@ -200,14 +200,14 @@ public class SearchSceneController implements Initializable {
 
     @FXML
     public void editWord() {
-        if (lastLookupWord != null) {
-            if (lastLookupWord.isEmpty()) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Thông báo");
-                alert.setContentText("Chưa chọn từ để chỉnh sửa!");
-                alert.show();
-                return;
-            }
+        if (lastLookupWord.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Thông báo");
+            alert.setContentText("Chưa chọn từ để chỉnh sửa!");
+            alert.show();
+            return;
+        } else {
+
         }
     }
     @Override

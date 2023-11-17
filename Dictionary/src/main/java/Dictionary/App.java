@@ -10,7 +10,7 @@ import Dictionary.Models.*;
 public class App extends Application {
     public static EnEnDictionary enenDictionary = EnEnDictionary.getInstance();
     public static EnViDictionary enviDictionary = EnViDictionary.getInstance();
-    @Override
+    @Override 
     public void start(Stage stage) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/View/BaseScene.fxml"));

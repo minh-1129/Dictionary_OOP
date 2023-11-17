@@ -122,7 +122,7 @@ public class EnViDictionary extends DatabaseDictionary {
         }
     }
 
-    public boolean update(String target, String pronunciation, String html, String description) {
+    public boolean update(String target, String description, String html, String pronunciation) {
         String SQL_QUERY = "UPDATE av SET pronounce = ?, html = ?, description = ? WHERE word = ?";
         try {
             PreparedStatement ps = connection.prepareStatement(SQL_QUERY);

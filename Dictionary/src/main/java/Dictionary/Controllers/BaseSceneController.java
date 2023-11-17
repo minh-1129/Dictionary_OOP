@@ -51,7 +51,7 @@ public class BaseSceneController implements Initializable {
         if(SettingSceneController.getTransMode() == SettingSceneController.ENEN) {
             showComponent("/View/AddWordSceneEn.fxml");
         } else {
-
+            showComponent("/View/AddWordSceneVi.fxml");
         }
     }
 }

@@ -9,13 +9,10 @@ import Dictionary.Models.*;
 
 import java.util.ArrayList;
 
-public class Game extends Application {
+public class Game  {
 
     public static final ArrayList<String> winningWords = new ArrayList<>();
     public static final ArrayList<String> dictionaryWords = new ArrayList<>();
-    @FXML
-    @Override
-    public void start(Stage stage) {
 
-    }
+
 }
