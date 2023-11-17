@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -132,6 +133,17 @@ public class TranslateSceneController implements Initializable {
 
   @FXML
   public void speakTextInOutput() {
+//    Thread thread = new Thread(() -> {
+//      try {
+//        TextToSpeech.playSound(outputText.getText(), getLanguageCode(targetLanguage.getValue()) );
+//      } catch (IOException e) {
+//        throw new RuntimeException(e);
+//      } catch (JavaLayerException e) {
+//        throw new RuntimeException(e);
+//      }
+//    });
+//    thread.setDaemon(true);
+//    thread.start();
     String textInOutput = outputText.getText();
     String language = getLanguageCode(targetLanguage.getValue());
     if (!textInOutput.isBlank()) {
