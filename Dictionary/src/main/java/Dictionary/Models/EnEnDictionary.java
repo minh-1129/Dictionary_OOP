@@ -35,7 +35,7 @@ public class EnEnDictionary extends DatabaseDictionary{
      * @return
      */
     public boolean insertWord(String wordTarget, String type, String meaning, String pronunciation, String example, String synonyms, String antonyms) {
-        String SQL_QUERY = "INSERT INTO English (Word, Type, Meaning, Pronunciation, Example, Synonym, Antonyms VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String SQL_QUERY = "INSERT INTO English (Word, Type, Meaning, Pronunciation, Example, Synonym, Antonyms) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try {
             PreparedStatement ps = connection.prepareStatement(SQL_QUERY);
@@ -123,6 +123,32 @@ public class EnEnDictionary extends DatabaseDictionary{
             e.printStackTrace();
             return false;
         }
+    }
+
+    public boolean update(String target, String type, String meaning, String example, String pronunciation, String synonyms, String antonyms) {
+        String SQL_QUERY = "UPDATE English SET Type = ?, Meaning = ?, Example = ?, Pronunciation = ?, Synonym = ?, Antonyms = ? WHERE Word = ?";
+        try {
+            PreparedStatement ps = connection.prepareStatement(SQL_QUERY);
+            ps.setString(1, type);
+            ps.setString(2, meaning);
+            ps.setString(3, example);
+            ps.setString(4, pronunciation);
+            ps.setString(5, synonyms);
+            ps.setString(6, antonyms);
+            ps.setString(7, target);
+            try {
+                int id = ps.executeUpdate();
+                if (id == 0) {
+                    return false;
+                }
+            } finally {
+                close(ps);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 
     public boolean updatePronunciation(String target, String pronunciation) {

@@ -16,6 +16,7 @@ public class App extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/View/BaseScene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 960, 600);
+            scene.getStylesheets().add(getClass().getResource("/Style/Style.css").toExternalForm());
             stage.setTitle("CMP_Project");
             stage.setScene(scene);
             stage.setOnCloseRequest(
