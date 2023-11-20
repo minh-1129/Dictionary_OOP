@@ -17,6 +17,9 @@ public class BaseSceneController implements Initializable {
     private Button mSetting, mSearch, mTranslate, mGame, mAdd, mQuiz;
 
     @FXML
+    private Button mSynonym;
+
+    @FXML
     private AnchorPane mainLayout;
 
     @FXML
@@ -30,6 +33,7 @@ public class BaseSceneController implements Initializable {
         mSetting.setOnAction(event -> showComponent("/View/SettingScene.fxml"));
         mAdd.setOnAction(event -> showComponentAdd());
         mQuiz.setOnAction(event -> showComponent("/View/QuizScene.fxml") );
+        mSynonym.setOnAction(event -> showComponent("/View/SynonymScene.fxml") );
     }
 
     public void setNode(Node node) {

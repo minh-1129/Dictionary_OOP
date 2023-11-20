@@ -101,11 +101,11 @@
                               <Font size="15.0" />
                            </font>
                         </Button>
-                        <Button fx:id="mSynonym" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #112E69;" text="     Synonym" textFill="#f6f0f0">
+                        <Button fx:id="mSynonym" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #112E69;" text="    Synonym  " textFill="#f6f0f0">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../Image/setting.png" />
+                                    <Image url="@../Image/synonym.png" />
                                  </image>
                               </ImageView>
                            </graphic>

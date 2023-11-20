@@ -30,7 +30,7 @@ public class TextToSpeech {
 
     URL url = new URL(
         "https://translate.google.com/translate_tts?ie=UTF-8&tl="
-            + "en"
+            + languageOutput
             + "&client=tw-ob&q="
             + URLEncoder.encode(text, StandardCharsets.UTF_8));
     HttpURLConnection urlConn = (HttpURLConnection) url.openConnection();
@@ -57,9 +57,17 @@ public class TextToSpeech {
   }
 
   public static void playSound(String text, String language) throws IOException, JavaLayerException {
-    TextToSpeech audio = TextToSpeech.getInstance();
-    InputStream soundStream = audio.getAudio(text, language);
-    audio.play(soundStream);
+    try {
+      TextToSpeech audio = TextToSpeech.getInstance();
+      InputStream soundStream = audio.getAudio(text, language);
+      audio.play(soundStream);
+    } catch (IOException e) {
+      e.printStackTrace();
+      return;
+    } catch (JavaLayerException e) {
+      e.printStackTrace();
+      return;
+    }
   }
 
 }
