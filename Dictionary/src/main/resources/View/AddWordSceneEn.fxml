@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="780.0" style="-fx-background-color: #FDFFD0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.AddWordEnController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="780.0" style="-fx-background-color: #FDFFD0;" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.AddWordEnController">
    <children>
-      <AnchorPane layoutX="45.0" layoutY="29.0" prefHeight="40.0" prefWidth="310.0" style="-fx-background-radius: 1cm; -fx-background-color: #FFFEFE;" AnchorPane.bottomAnchor="501.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="29.0">
+      <AnchorPane layoutX="45.0" layoutY="29.0" prefHeight="40.0" prefWidth="310.0" styleClass="word-fill-pane" AnchorPane.bottomAnchor="501.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="29.0">
          <children>
-            <TextField fx:id="mWordTarget" layoutX="10.0" layoutY="20.0" onKeyReleased="#findIfInDatabase" prefHeight="40.0" prefWidth="229.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="0.0" />
+            <TextField fx:id="mWordTarget" layoutX="10.0" layoutY="20.0" onKeyReleased="#findIfInDatabase" prefHeight="40.0" prefWidth="229.0" styleClass="text-fill2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="0.0" />
             <Button fx:id="addButton" layoutX="265.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#Add" onMousePressed="#Add" onMouseReleased="#Add" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: #FFFEFE;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="1.0">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
@@ -25,60 +25,60 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="33.0" layoutY="90.0" prefHeight="93.0" prefWidth="320.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="90.0">
+      <AnchorPane layoutX="33.0" layoutY="90.0" prefHeight="93.0" prefWidth="320.0" styleClass="search-result" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="90.0">
          <children>
-            <TextField fx:id="mPronunciation" layoutX="71.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-            <Label layoutX="14.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" text="Pronunciation">
+            <TextField fx:id="mPronunciation" layoutX="71.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="14.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Pronunciation">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="425.0" layoutY="90.0" prefHeight="93.0" prefWidth="320.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="90.0">
+      <AnchorPane layoutX="425.0" layoutY="90.0" prefHeight="93.0" prefWidth="320.0" styleClass="search-result" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="90.0">
          <children>
-            <TextField fx:id="mType" layoutX="71.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-            <Label layoutX="15.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" text="Type">
+            <TextField fx:id="mType" layoutX="71.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="15.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Type">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="68.0" layoutY="192.0" prefHeight="93.0" prefWidth="320.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="192.0">
+      <AnchorPane layoutX="68.0" layoutY="192.0" prefHeight="93.0" prefWidth="320.0" styleClass="search-result" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="192.0">
          <children>
-            <TextField fx:id="mSynonyms" layoutX="64.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-            <Label layoutX="15.0" layoutY="12.0" prefHeight="33.0" prefWidth="290.0" text="Synonyms">
+            <TextField fx:id="mSynonyms" layoutX="64.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="15.0" layoutY="12.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Synonyms">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="425.0" layoutY="192.0" prefHeight="93.0" prefWidth="320.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="192.0">
+      <AnchorPane layoutX="425.0" layoutY="192.0" prefHeight="93.0" prefWidth="320.0" styleClass="search-result" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="192.0">
          <children>
-            <TextField fx:id="mAntonyms" layoutX="80.0" layoutY="28.0" prefHeight="38.0" prefWidth="300.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-            <Label layoutX="15.0" layoutY="7.0" prefHeight="40.0" prefWidth="290.0" text="Antonyms">
+            <TextField fx:id="mAntonyms" layoutX="80.0" layoutY="28.0" prefHeight="38.0" prefWidth="300.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="15.0" layoutY="7.0" prefHeight="40.0" prefWidth="290.0" styleClass="content-label" text="Antonyms">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="68.0" layoutY="348.0" prefHeight="137.0" prefWidth="200.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="300.0">
+      <AnchorPane layoutX="68.0" layoutY="348.0" prefHeight="137.0" prefWidth="200.0" styleClass="search-result" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="300.0">
          <children>
-            <TextArea fx:id="mMeaning" layoutX="53.0" layoutY="19.0" prefHeight="137.0" prefWidth="200.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
-            <Label layoutX="15.0" layoutY="10.0" prefHeight="33.0" prefWidth="290.0" text="Meaning">
+            <TextArea fx:id="mMeaning" layoutX="53.0" layoutY="19.0" prefHeight="137.0" prefWidth="200.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+            <Label layoutX="15.0" layoutY="10.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" text="Meaning">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="418.0" layoutY="350.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="300.0">
+      <AnchorPane layoutX="418.0" layoutY="350.0" prefHeight="124.0" prefWidth="200.0" styleClass="search-result" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="300.0">
          <children>
-            <TextArea fx:id="mExample" layoutX="39.0" layoutY="35.0" prefHeight="185.0" prefWidth="310.0" style="-fx-border-color: #FFFEFE;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
-            <Label layoutX="15.0" layoutY="9.0" prefHeight="40.0" prefWidth="290.0" text="Example">
+            <TextArea fx:id="mExample" layoutX="39.0" layoutY="35.0" prefHeight="185.0" prefWidth="310.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+            <Label layoutX="15.0" layoutY="9.0" prefHeight="40.0" prefWidth="290.0" styleClass="content-label" text="Example">
                <font>
                   <Font size="22.0" />
                </font>
