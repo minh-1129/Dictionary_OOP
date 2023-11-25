@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.BaseSceneController">
+<AnchorPane prefHeight="500.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.BaseSceneController">
    <children>
       <BorderPane prefHeight="500.0" prefWidth="733.0">
          <left>
@@ -124,6 +124,20 @@
                                  </font>
                               </Button>
                            </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <Button fx:id="mSynonym" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #112E69;" text="    Synonym  " textFill="#f6f0f0">
+                              <graphic>
+                                 <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@../Image/synonym.png" />
+                                    </image>
+                                 </ImageView>
+                              </graphic>
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Button>
                         </AnchorPane>
                      </children>
                   </VBox>
