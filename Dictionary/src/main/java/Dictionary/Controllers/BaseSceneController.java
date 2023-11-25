@@ -1,5 +1,6 @@
 package Dictionary.Controllers;
 
+import Dictionary.WordleGame;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -29,7 +30,7 @@ public class BaseSceneController implements Initializable {
 
         mTranslate.setOnAction(event -> showComponent("/View/TranslateScene.fxml"));
 
-        mGame.setOnAction(event -> showComponent("/View/GameScene.fxml"));
+        mGame.setOnAction(event -> showWordle());
         mSetting.setOnAction(event -> showComponent("/View/SettingScene.fxml"));
         mAdd.setOnAction(event -> showComponentAdd());
         mQuiz.setOnAction(event -> showComponent("/View/QuizScene.fxml") );
@@ -39,6 +40,11 @@ public class BaseSceneController implements Initializable {
     public void setNode(Node node) {
         mainLayout.getChildren().clear();
         mainLayout.getChildren().add(node);
+    }
+
+    @FXML
+    public void showWordle() {
+        WordleGame game = WordleGame.getInstance();
     }
 
     @FXML

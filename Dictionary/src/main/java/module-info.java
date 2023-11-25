@@ -11,5 +11,7 @@ module com.example.dictionary {
   opens Dictionary to javafx.fxml;
     exports Dictionary;
     exports Dictionary.Controllers;
+    exports Dictionary.Controllers.Wordle;
     opens Dictionary.Controllers to javafx.fxml;
+    opens Dictionary.Controllers.Wordle to javafx.fxml;
 }
