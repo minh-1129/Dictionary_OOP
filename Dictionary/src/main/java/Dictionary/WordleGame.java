@@ -29,10 +29,12 @@ public class WordleGame  {
         return instance;
     }
     private WordleGame() {
+        initializeWordLists();
+    }
+
+    public void init() {
         try {
             stage = new Stage();
-            initializeWordLists();
-
             FXMLLoader fxmlLoader = new FXMLLoader(WordleGame.class.getResource("/View/Wordle/WordleView.fxml"));
 
             Parent root = fxmlLoader.load();

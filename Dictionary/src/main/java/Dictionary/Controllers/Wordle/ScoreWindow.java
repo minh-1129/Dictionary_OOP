@@ -67,7 +67,7 @@ public class ScoreWindow {
         scene.getStylesheets()
                 .add(Objects.requireNonNull(ScoreWindow.class.getResource("/Style/Wordle.css"))
                         .toExternalForm());
-        
+
         stage.setScene(scene);
         stage.showAndWait();
     }
