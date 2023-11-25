@@ -44,9 +44,9 @@ public class BaseSceneController implements Initializable {
 
     @FXML
     public void showWordle() {
-
-        WordleGame game = WordleGame.getInstance();
-        game.init();
+        if (!WordleGame.getInstance().isRunning()) {
+            WordleGame.getInstance().init();
+        }
     }
 
     @FXML
