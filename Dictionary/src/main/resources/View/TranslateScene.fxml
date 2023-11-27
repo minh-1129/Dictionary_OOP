@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="780.0" styleClass="base-layout" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.TranslateSceneController">
    <children>
-      <AnchorPane layoutX="93.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="640.0" styleClass="api-bar" AnchorPane.bottomAnchor="487.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="33.0">
+      <AnchorPane layoutX="93.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="640.0" styleClass="api-bar" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="50.0">
          <children>
             <ComboBox fx:id="targetLanguage" layoutX="560.0" layoutY="18.0" onAction="#translateTextInOutput" prefWidth="150.0" promptText="Target Language" styleClass="api-combobox" AnchorPane.bottomAnchor="12.5" AnchorPane.leftAnchor="410.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="12.5" />
             <ComboBox fx:id="sourceLanguage" layoutX="102.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#translateTextInInput" prefWidth="150.0" promptText="Source Language" styleClass="api-combobox" AnchorPane.bottomAnchor="12.5" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="410.0" AnchorPane.topAnchor="12.5" />
@@ -21,9 +21,9 @@
 
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="514.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30px;" AnchorPane.bottomAnchor="43.5" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="126.5">
+      <AnchorPane layoutX="514.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" AnchorPane.bottomAnchor="43.5" AnchorPane.leftAnchor="430.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="126.5">
          <children>
-            <TextArea fx:id="outputText" layoutX="-5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" styleClass="search-result" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TextArea fx:id="outputText" layoutX="-5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <font>
                   <Font size="20.0" />
                </font></TextArea>
@@ -34,9 +34,9 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="50.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30px;" AnchorPane.bottomAnchor="43.5" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="126.5">
+      <AnchorPane layoutX="50.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30px;" AnchorPane.bottomAnchor="43.5" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="126.5">
          <children>
-            <TextArea fx:id="inputText" layoutX="45.0" layoutY="96.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#translate" prefHeight="300.0" prefWidth="310.0" styleClass="search-result" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TextArea fx:id="inputText" layoutX="45.0" layoutY="96.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#translate" prefHeight="300.0" prefWidth="310.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <font>
                   <Font size="20.0" />
                </font>

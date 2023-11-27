@@ -25,7 +25,7 @@ public class WordleGame  {
     private static WordleGame instance;
     private static Stage stage;
 
-    private boolean isRunning = false;
+    private static boolean isRunning = false;
     public static WordleGame getInstance() {
         if (instance == null) {
             instance = new WordleGame();
@@ -73,11 +73,11 @@ public class WordleGame  {
         }
     }
 
-    public void showWarning() {
+    public static void showWarning() {
         GameWarning.makeText(stage);
     }
 
-    public void quit() {
+    public static void quit() {
         isRunning = false;
         stage.close();
 

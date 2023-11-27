@@ -1,19 +1,31 @@
 .word-fill-pane {
     -fx-background-radius: 1cm;
-    -fx-background-color:  #FFFEFE;
+    -fx-background-color: #f2e6be;
 }
 
 .search-result {
-    -fx-background-color:  #FFFEFE;
+    -fx-background-color:radial-gradient(center 50% 50%, radius 100%, #f2e6be, #faefe3);
     -fx-background-radius: 0.5cm;
 }
 
+.word-fill-pane2 {
+    -fx-background-radius: 0.5cm;
+    -fx-background-color: #f2e6be;
+}
+
 .main-background {
-    -fx-background-color:  #112E69;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, #194e48, #15716a);
+    -fx-effect: dropshadow;
 }
 
 .base-layout {
-    -fx-background-color:  #FDFFD0;
+    -fx-background-color:  #fbf7fd;
+    -fx-effect: dropshadow;
+    -fx-background-radius: 1cm;
+    -fx-min-width: 800; /* Kích thước tối thiểu theo chiều ngang*/
+    -fx-min-height: 600; /* Kích thước tối thiểu theo chiều dọc */
+    -fx-max-width: 800; /* Kích thước tối đa theo chiều ngang*/
+    -fx-max-height: 600; /*Kích thước tối đa theo chiều dọc */
 }
 
 
@@ -21,10 +33,11 @@
     -fx-padding: 2 5 5 5;
     -fx-background-insets: 0,0 0 5 0,0 0 6 0,0 0 7 0;
     -fx-background-radius: 1cm;
-    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #004080 0%, #00274d 100%),
-                                 #003366,
-                                 #005599,
-                                 radial-gradient(center 50% 50%, radius 100%, #005599, #004080);
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #007f5f 0%, #004d40 100%),
+        #006644,
+        #008866,
+        radial-gradient(center 50% 50%, radius 100%, #008866, #007f5f);
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75),4,0,0,1);
     -fx-font-weight: bold;
     -fx-font-size: 1.1em;
@@ -34,12 +47,18 @@
 }
 
 .test-but:hover {
-    -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #0a3d62 0%, #062338 100%),
-                          #0c4f78,
-                          #0e5d8b,
-                          radial-gradient(center 50% 50%, radius 100%, #0e5d8b, #0a3d62);
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #005033 0%, #003326 100%),
+        #004533,
+        #006644,
+        radial-gradient(center 50% 50%, radius 100%, #006644, #005033);
     -fx-scale-x: 1.05; /* Phóng to theo trục X */
     -fx-scale-y: 1.05; /* Phóng to theo trục Y */
+    -fx-text-effect: innershadow(gaussian, #00ff00, 5, 1.0, 0, 0);
+}
+
+.base-background {
+    -fx-background-color: linear-gradient(to right, #02665d 0%, #fbf7fd 100%);
 }
 
 .test-but:pressed {
@@ -48,20 +67,28 @@
 }
 
 .tilte-label{
-
+  /*-fx-background-color: #3498db; /* Màu nền của label */
+  -fx-text-fill: black; /* Màu chữ của label */
+  -fx-font-family: "Arial"; /* Font chữ */
+  -fx-font-size: 14pt; /* Kích thước font chữ */
+  -fx-font-weight: bold; /* Độ đậm của font chữ */
 }
 
 .content-label{
-
+  /*-fx-background-color: #3498db; /* Màu nền của label */
+  -fx-text-fill: black; /* Màu chữ của label */
+  -fx-font-family: "Arial"; /* Font chữ */
+  -fx-font-size: 14pt; /* Kích thước font chữ */
+  -fx-font-weight: bold; /* Độ đậm của font chữ */
 }
 
 .text-fill1 {
-    -fx-border-color:  #FFFEFE;
+    -fx-border-color:  #f2e6be;
     -fx-background-color:  -fx-control-inner-background;
 }
 
 .text-fill2 {
-    -fx-border-color:  #FFFEFE;
+    -fx-background-color: #f2e6be;
 }
 
 .api-bar {
@@ -73,4 +100,10 @@
     -fx-background-color:  #5A48D9;
     -fx-background-radius:  30px;
     -fx-text-fill:  #FFFFFF;
+}
+
+.radio-but {
+    -fx-background-color: #f2e6be; /* Màu vàng */
+    -fx-background-radius: 1cm; /* Góc bo tròn */
+    -fx-padding: 8px; /* Khoảng cách giữa nội dung và biên */
 }

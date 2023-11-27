@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+
+import static Dictionary.App.*;
 // thời gian, kết thúc hiện điểm cuối, thêm kiểu câu hỏi fill;
 
 public class Quiz {
@@ -34,12 +36,20 @@ public class Quiz {
     private String inputAnswer;
     private String trueAnswer;
     private int questionNumber;
+    private int timeplay;
+
+    private long startTime;
 
     public Quiz() throws SQLException {
         for(EnViWord word :wordlist) {
             WordMapMean.put(word.getWordTarget(), word.getDescription());
             MeanMapWord.put(word.getDescription(), word.getWordTarget());
         }
+        startTime = System.currentTimeMillis();
+    }
+
+    public long getStartTime() {
+        return startTime;
     }
 
 
@@ -59,13 +69,6 @@ public class Quiz {
             case Word:
                 return "Chose the word for: " + question;
             case Audio:
-                try {
-                    TextToSpeech.playSoundGoogleTranslateEnglish(question);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (JavaLayerException e) {
-                    e.printStackTrace();
-                }
                 return "Listen and choose the correct answer";
             default:
                 return "";
@@ -73,7 +76,7 @@ public class Quiz {
     }
 
     public void initQuiz() {
-        int randomNumber = random.nextInt(4);
+        int randomNumber = random.nextInt(3);
         setTypeQuestion(randomNumber);
         switch (QuestionType.values()[getTypeQuestion()]) {
             case Meaning:
@@ -123,6 +126,17 @@ public class Quiz {
 
     public void increaseScore() {
         scores++;
+    }
+
+    public void runTimePlay() {
+        for (int i = 300; i >= 0; i--) {
+            timeplay = i;
+            try {
+                Thread.sleep(1000); // Đợi một giây (1000 milliseconds)
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public String getRandomWord() {
@@ -190,8 +204,16 @@ public class Quiz {
         return scores;
     }
 
+    public int getTimeplay() {
+        return timeplay;
+    }
+
     public void setScores(int scores) {
         this.scores = scores;
+    }
+
+    public void setTimeplay(int timeplay) {
+        this.timeplay = timeplay;
     }
 
     public String getInputAnswer() {
@@ -204,6 +226,10 @@ public class Quiz {
 
     public int getQuestionNumber() {
         return questionNumber;
+    }
+
+    public void setQuestionNumber(int questionNumber) {
+        this.questionNumber = questionNumber;
     }
 
     public void increaseQuesNumber() {

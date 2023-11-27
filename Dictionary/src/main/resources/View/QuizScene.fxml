@@ -10,28 +10,44 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.QuizSceneController">
+<AnchorPane stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.QuizSceneController">
    <children>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="780.0">
          <top>
             <AnchorPane prefHeight="100.0" prefWidth="780.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="mQues" layoutX="106.0" layoutY="42.0" text="Label" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0" />
+                  <Label fx:id="mQues" layoutX="106.0" layoutY="42.0" styleClass="content-label" text="Label" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="20.0" />
+                  <Button fx:id="playaudio" layoutX="679.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#playAudioQues" styleClass="test-but">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/speaker.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </children>
             </AnchorPane>
          </top>
          <center>
             <HBox prefHeight="0.0" prefWidth="780.0" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="260.0" />
                   <AnchorPane prefHeight="200.0" prefWidth="260.0">
                      <children>
-                        <Label fx:id="mScore" layoutX="116.0" layoutY="117.0" text="Label" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                        <Label fx:id="mScore" layoutX="86.0" layoutY="50.0" styleClass="content-label" text="Label" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="50.0" />
+                     </children></AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="260.0">
+                     <children>
+                        <ImageView fitHeight="247.0" fitWidth="248.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="4.0">
+                           <image>
+                              <Image url="@../Image/quizmain.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="250.0" prefWidth="260.0">
                      <children>
-                        <Button fx:id="mNext" mnemonicParsing="false" style="-fx-background-color: #FDFFD0;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
+                        <Button fx:id="mNext" mnemonicParsing="false" styleClass="test-but" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
                            <graphic>
                               <ImageView fitHeight="101.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -52,12 +68,12 @@
                      <children>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <RadioButton fx:id="mAnsA" layoutX="135.0" layoutY="38.0" mnemonicParsing="false" text="RadioButton" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                              <RadioButton fx:id="mAnsA" layoutX="135.0" layoutY="38.0" mnemonicParsing="false" styleClass="radio-but" text="RadioButton" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <RadioButton fx:id="mAnsC" layoutX="145.0" layoutY="38.0" mnemonicParsing="false" text="RadioButton" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                              <RadioButton fx:id="mAnsC" layoutX="145.0" layoutY="38.0" mnemonicParsing="false" styleClass="radio-but" text="RadioButton" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -66,12 +82,12 @@
                      <children>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <RadioButton fx:id="mAnsB" layoutX="152.0" layoutY="47.0" mnemonicParsing="false" text="RadioButton" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                              <RadioButton fx:id="mAnsB" layoutX="152.0" layoutY="47.0" mnemonicParsing="false" styleClass="radio-but" text="RadioButton" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <RadioButton fx:id="mAnsD" layoutX="145.0" layoutY="47.0" mnemonicParsing="false" text="RadioButton" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                              <RadioButton fx:id="mAnsD" layoutX="145.0" layoutY="47.0" mnemonicParsing="false" styleClass="radio-but" text="RadioButton" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
                            </children>
                         </AnchorPane>
                      </children>

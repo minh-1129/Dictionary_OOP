@@ -145,9 +145,9 @@
             </VBox>
          </left>
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="main-background" stylesheets="@../Style/Style.css" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="base-background" stylesheets="@../Style/Style.css" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane fx:id="mainLayout" prefHeight="200.0" prefWidth="200.0" styleClass="base-layout" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                  <AnchorPane fx:id="mainLayout" prefHeight="200.0" prefWidth="200.0" styleClass="base-layout" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children></AnchorPane>
          </center>
       </BorderPane>
