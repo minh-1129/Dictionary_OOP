@@ -305,14 +305,14 @@ public class GameHelper {
                 CURRENT_ROW++;
                 CURRENT_COLUMN = 1;
             } else {
-                WordleGame.showWarning();
+                WordleGame.getInstance().showWarning();
             }
             if (ScoreWindow.resetGame.get()) {
                 resetGame(gridPane, keyboardRow1, keyboardRow2, keyboardRow3);
                 ScoreWindow.resetGame.set(false);
             }
             if (ScoreWindow.quitApplication.get()) {
-                WordleGame.quit();
+                WordleGame.getInstance().quit();
             }
         }
     }
