@@ -7,6 +7,7 @@ module com.example.dictionary {
     requires org.kordamp.bootstrapfx.core;
   requires org.json;
   requires org.apache.commons.text;
+  requires java.desktop;
 
   opens Dictionary to javafx.fxml;
     exports Dictionary;

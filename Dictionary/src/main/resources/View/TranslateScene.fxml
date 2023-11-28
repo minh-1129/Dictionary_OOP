@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="780.0" styleClass="base-layout" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.TranslateSceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="780.0" styleClass="base-layout" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.TranslateSceneController">
    <children>
       <AnchorPane layoutX="93.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="640.0" styleClass="api-bar" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="50.0">
          <children>
@@ -44,6 +44,11 @@
             <ImageView fx:id="speakerTextInInput" fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="351.0" onMouseClicked="#speakTextInInput" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="360.0">
                <image>
                   <Image url="@../Image/speaker.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="recordVoice" fitHeight="35.0" fitWidth="35.0" layoutX="88.0" layoutY="190.0" onMouseClicked="#recordingVoiceAndTranslate" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="235.0" AnchorPane.topAnchor="360.0">
+               <image>
+                  <Image url="@../Image/voice_recorder.png" />
                </image>
             </ImageView>
           

@@ -1,5 +1,7 @@
 package Dictionary.Controllers;
 
+import Dictionary.Service.AudioManager;
+import Dictionary.Service.SpeechToTextAPI;
 import Dictionary.Service.TextToSpeech;
 import Dictionary.Service.TranslatorApi;
 import java.io.IOException;
@@ -31,6 +33,9 @@ public class TranslateSceneController implements Initializable {
 
   @FXML
   ImageView btnSwap, speakerTextInInput, speakerTextInOutput;
+
+  @FXML
+  ImageView recordVoice;
 
   @Override
   public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -192,6 +197,30 @@ public class TranslateSceneController implements Initializable {
           }
         });
       }
+    }
+  }
+
+  @FXML
+  public void recordingVoiceAndTranslate() {
+    if (sourceLanguage.getValue().equals("Phát hiện ngôn ngữ") || sourceLanguage.getValue().equals("Tiếng Anh")) {
+      if (!AudioManager.isRecording()) {
+        System.out.println("Recording...Speak now");
+        Thread thread = new Thread(() -> {
+          AudioManager.startRecording();
+          String receivedText = SpeechToTextAPI.getSpeechToText();
+          Platform.runLater(() -> {
+            inputText.setText(receivedText);
+            translate();
+          });
+        });
+        thread.setDaemon(true);
+        thread.start();
+      } else {
+        System.out.println("Stop recording");
+        AudioManager.stopRecording();
+      }
+    } else {
+      return;
     }
   }
 }
