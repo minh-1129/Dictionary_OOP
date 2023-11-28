@@ -76,14 +76,14 @@
 
 .content-label{
   /*-fx-background-color: #3498db; /* Màu nền của label */
-  -fx-text-fill: black; /* Màu chữ của label */
+  -fx-text-fill: #333b33; /* Màu chữ của label */
   -fx-font-family: "Arial"; /* Font chữ */
   -fx-font-size: 14pt; /* Kích thước font chữ */
   -fx-font-weight: bold; /* Độ đậm của font chữ */
 }
 
 .text-fill1 {
-    -fx-border-color:  #f2e6be;
+    -fx-border-color:  #white;
     -fx-background-color:  -fx-control-inner-background;
 }
 
@@ -93,6 +93,9 @@
 
 .text-fill2 {
     -fx-background-color: #f2e6be;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
 }
 
 .api-bar {
@@ -183,4 +186,14 @@
     -fx-padding: 15;
     -fx-border-insets: 5;
     -fx-background-insets: 5;
+}
+
+.pane-white {
+    -fx-background-color:white;
+    -fx-background-radius: 0.5cm;
+}
+
+.pane-black {
+    -fx-background-color:black;
+    -fx-background-radius: 0.5cm;
 }

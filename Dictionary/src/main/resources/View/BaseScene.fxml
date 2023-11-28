@@ -27,7 +27,7 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <VBox alignment="TOP_CENTER" prefHeight="463.0" prefWidth="157.0">
+                  <VBox alignment="TOP_CENTER" prefHeight="524.0" prefWidth="155.0">
                      <children>
                         <AnchorPane prefHeight="60.0">
                            <children>
@@ -122,6 +122,22 @@
                                  <Font size="15.0" />
                               </font>
                            </Button>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <Button fx:id="mChatBot" layoutX="6.0" layoutY="5.0999755859375" mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" styleClass="test-but" stylesheets="@../Style/Style.css" text="   ChatBot    " textFill="#f6f0f0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/setting.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
                         </AnchorPane>
                         <AnchorPane>
                            <children>

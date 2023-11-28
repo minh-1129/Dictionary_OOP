@@ -26,8 +26,8 @@
         </AnchorPane>
         <AnchorPane layoutX="26.0" layoutY="87.0" prefHeight="100.0" prefWidth="205.0" styleClass="word-fill-pane2" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="120.0">
             <children>
-                <TextField fx:id="mPronunciation" layoutX="11.2" layoutY="28.0" prefHeight="47.0" prefWidth="183.0" styleClass="text-fill2" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0" />
-                <Label layoutX="14.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Pronunciation">
+                <TextField fx:id="mPronunciation" layoutX="11.2" layoutY="28.0" prefHeight="47.0" prefWidth="183.0" styleClass="text-fill3" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0" />
+                <Label layoutX="14.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Pronunciation" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -36,8 +36,8 @@
         </AnchorPane>
         <AnchorPane layoutX="26.0" layoutY="202.0" prefHeight="100.0" prefWidth="205.0" styleClass="word-fill-pane2" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="300.0">
             <children>
-            <TextField fx:id="mDescription" layoutX="11.2" layoutY="47.2" prefHeight="40.0" prefWidth="190.0" styleClass="text-fill2" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0" />
-                <Label layoutX="15.0" prefHeight="34.0" prefWidth="182.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Description">
+            <TextField fx:id="mDescription" layoutX="11.2" layoutY="47.2" prefHeight="40.0" prefWidth="190.0" styleClass="text-fill3" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0" />
+                <Label layoutX="15.0" prefHeight="34.0" prefWidth="182.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Description" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
                     <font>
                         <Font size="18.0" />
                     </font>
