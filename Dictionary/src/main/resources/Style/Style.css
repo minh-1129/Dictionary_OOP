@@ -14,13 +14,12 @@
 }
 
 .main-background {
-    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, #194e48, #15716a);
-    -fx-effect: dropshadow;
+    /*-fx-background-color: radial-gradient(center 50% 50%, radius 100%, #114e48, #15716a); */
+    -fx-background-color: linear-gradient(to right, #034e49, #05645e);
 }
 
 .base-layout {
     -fx-background-color:  #fbf7fd;
-    -fx-effect: dropshadow;
     -fx-background-radius: 1cm;
     -fx-min-width: 800; /* Kích thước tối thiểu theo chiều ngang*/
     -fx-min-height: 600; /* Kích thước tối thiểu theo chiều dọc */
@@ -57,34 +56,39 @@
     -fx-text-effect: innershadow(gaussian, #00ff00, 5, 1.0, 0, 0);
 }
 
-.base-background {
-    -fx-background-color: linear-gradient(to right, #02665d 0%, #fbf7fd 100%);
-}
-
 .test-but:pressed {
     -fx-padding: 5 10 8 10;
     -fx-background-insets: 2 0 0 0,2 0 3 0,2 0 4 0,2 0 5 0;
 }
 
+.base-background {
+    -fx-background-color: linear-gradient(to right, #02665d 0%, #fbf7fd 100%);
+}
+
+
 .tilte-label{
-    /*-fx-background-color: #3498db; /* Màu nền của label */
-    -fx-text-fill: black; /* Màu chữ của label */
-    -fx-font-family: "Arial"; /* Font chữ */
-    -fx-font-size: 14pt; /* Kích thước font chữ */
-    -fx-font-weight: bold; /* Độ đậm của font chữ */
+  /*-fx-background-color: #3498db; /* Màu nền của label */
+  -fx-text-fill: black; /* Màu chữ của label */
+  -fx-font-family: "Arial"; /* Font chữ */
+  -fx-font-size: 14pt; /* Kích thước font chữ */
+  -fx-font-weight: bold; /* Độ đậm của font chữ */
 }
 
 .content-label{
-    /*-fx-background-color: #3498db; /* Màu nền của label */
-    -fx-text-fill: black; /* Màu chữ của label */
-    -fx-font-family: "Arial"; /* Font chữ */
-    -fx-font-size: 14pt; /* Kích thước font chữ */
-    -fx-font-weight: bold; /* Độ đậm của font chữ */
+  /*-fx-background-color: #3498db; /* Màu nền của label */
+  -fx-text-fill: black; /* Màu chữ của label */
+  -fx-font-family: "Arial"; /* Font chữ */
+  -fx-font-size: 14pt; /* Kích thước font chữ */
+  -fx-font-weight: bold; /* Độ đậm của font chữ */
 }
 
 .text-fill1 {
     -fx-border-color:  #f2e6be;
     -fx-background-color:  -fx-control-inner-background;
+}
+
+.text-fill3 {
+    -fx-border-color: #f2e6be;
 }
 
 .text-fill2 {
@@ -102,9 +106,41 @@
     -fx-text-fill:  #FFFFFF;
 }
 
-
 .radio-but {
     -fx-background-color: #f2e6be; /* Màu vàng */
     -fx-background-radius: 1cm; /* Góc bo tròn */
     -fx-padding: 8px; /* Khoảng cách giữa nội dung và biên */
+    -fx-font-size: 14px;
+    -fx-font-weight: medium;
+    -fx-font-family: "Arial";
+}
+
+.function-but {
+    -fx-padding: 2 5 5 5;
+    -fx-background-insets: 0,0 0 5 0,0 0 6 0,0 0 7 0;
+    -fx-background-radius: 0.5cm;
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #007f5f 0%, #004d40 100%),
+        #006644,
+        #008866,
+        radial-gradient(center 50% 50%, radius 100%, #008866, #007f5f);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75),4,0,0,1);
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s;
+}
+
+.function-but:hover {
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #005033 0%, #003326 100%),
+        #004533,
+        #006644,
+        radial-gradient(center 50% 50%, radius 100%, #006644, #005033);
+    -fx-scale-x: 1.05; /* Phóng to theo trục X */
+    -fx-scale-y: 1.05; /* Phóng to theo trục Y */
+    -fx-text-effect: innershadow(gaussian, #00ff00, 5, 1.0, 0, 0);
+}
+
+.function-but:pressed {
+    -fx-padding: 5 10 8 10;
+    -fx-background-insets: 2 0 0 0,2 0 3 0,2 0 4 0,2 0 5 0;
 }

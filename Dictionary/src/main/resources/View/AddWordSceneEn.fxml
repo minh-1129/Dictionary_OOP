@@ -27,8 +27,8 @@
       </AnchorPane>
       <AnchorPane layoutX="33.0" layoutY="90.0" prefHeight="93.0" prefWidth="320.0" styleClass="word-fill-pane2" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="100.0">
          <children>
-            <TextField fx:id="mPronunciation" layoutX="71.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-            <Label layoutX="14.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Pronunciation">
+            <TextField fx:id="mPronunciation" layoutX="71.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill3" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="14.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Pronunciation" AnchorPane.topAnchor="2.0">
                <font>
                   <Font size="22.0" />
                </font>
@@ -37,8 +37,8 @@
       </AnchorPane>
       <AnchorPane layoutX="425.0" layoutY="90.0" prefHeight="93.0" prefWidth="320.0" styleClass="word-fill-pane2" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="100.0">
          <children>
-            <TextField fx:id="mType" layoutX="71.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-            <Label layoutX="15.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Type">
+            <TextField fx:id="mType" layoutX="71.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill3" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="15.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Type" AnchorPane.topAnchor="2.0">
                <font>
                   <Font size="22.0" />
                </font>
@@ -47,8 +47,8 @@
       </AnchorPane>
       <AnchorPane layoutX="68.0" layoutY="192.0" prefHeight="93.0" prefWidth="320.0" styleClass="word-fill-pane2" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="320.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="200.0">
          <children>
-            <TextField fx:id="mSynonyms" layoutX="64.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-            <Label layoutX="15.0" layoutY="12.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Synonyms">
+            <TextField fx:id="mSynonyms" layoutX="64.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill3" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="15.0" layoutY="12.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Synonyms" AnchorPane.topAnchor="2.0">
                <font>
                   <Font size="22.0" />
                </font>
@@ -57,8 +57,8 @@
       </AnchorPane>
       <AnchorPane layoutX="425.0" layoutY="192.0" prefHeight="93.0" prefWidth="320.0" styleClass="word-fill-pane2" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="320.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="200.0">
          <children>
-            <TextField fx:id="mAntonyms" layoutX="80.0" layoutY="28.0" prefHeight="38.0" prefWidth="300.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-            <Label layoutX="15.0" layoutY="7.0" prefHeight="40.0" prefWidth="290.0" styleClass="content-label" text="Antonyms">
+            <TextField fx:id="mAntonyms" layoutX="80.0" layoutY="28.0" prefHeight="38.0" prefWidth="300.0" styleClass="text-fill3" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="15.0" layoutY="7.0" prefHeight="40.0" prefWidth="290.0" styleClass="content-label" text="Antonyms" AnchorPane.topAnchor="2.0">
                <font>
                   <Font size="22.0" />
                </font>
