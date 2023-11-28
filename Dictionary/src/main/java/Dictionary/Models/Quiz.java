@@ -1,6 +1,7 @@
 package Dictionary.Models;
 
 import Dictionary.Service.TextToSpeech;
+import javafx.scene.control.RadioButton;
 import javazoom.jl.decoder.JavaLayerException;
 
 import java.io.IOException;
@@ -18,17 +19,13 @@ public class Quiz {
     long seed = System.currentTimeMillis();
     Random random = new Random(seed);
 
-    public static Map<String, String> WordMapMean = new HashMap<>();
-    public static Map<String, String> MeanMapWord = new HashMap<>();
-
     enum QuestionType {
         Meaning,
         Word,
         Audio,
       //  Fill,
     }
-
-    ArrayList<EnViWord> wordlist = EnViDictionary.getInstance().getAllWords();
+    private int trueAnsIndex;
     private String question;
     private String[] choices = new String[4];
     private int scores;
@@ -41,11 +38,6 @@ public class Quiz {
     private long startTime;
 
     public Quiz() throws SQLException {
-        for(EnViWord word :wordlist) {
-            WordMapMean.put(word.getWordTarget(), word.getDescription());
-            MeanMapWord.put(word.getDescription(), word.getWordTarget());
-        }
-        startTime = System.currentTimeMillis();
     }
 
     public long getStartTime() {
@@ -65,9 +57,9 @@ public class Quiz {
     public String generateQuestion() {
         switch (QuestionType.values()[typeQuestion]) {
             case Meaning:
-                return "Chose the meaning of: " + question;
+                return "Choose the meaning of: " + question;
             case Word:
-                return "Chose the word for: " + question;
+                return "Choose the word for: " + question;
             case Audio:
                 return "Listen and choose the correct answer";
             default:
@@ -97,31 +89,56 @@ public class Quiz {
         return inputAnswer.equals(trueAnswer);
     }
 
+    public boolean validChoice(String choice) {
+        if (choice == null || choice.trim().isEmpty()) {
+            return false;
+        }
+
+        String lowerCaseChoice = choice.trim().toLowerCase();
+
+        if (lowerCaseChoice.startsWith("of") || lowerCaseChoice.startsWith("alt") || lowerCaseChoice.startsWith(" ")) {
+            return false;
+        }
+        return choice.length() < 80;
+    }
+
     public void initMeaningQuiz() {
         for (int i = 0; i < 4; i++) {
             choices[i] = getRandomMeaning();
+            while(!validChoice(choices[i]) && !validChoice(getWordFromMeaning(choices[i]))) {
+                choices[i] = getRandomMeaning();
+            }
         }
         int randomNumber = random.nextInt(4);
         setQuestion(getWordFromMeaning(choices[randomNumber]));
         setTrueAnswer(choices[randomNumber]);
+        setTrueAnsIndex(randomNumber);
     }
 
     public void initWordQuiz() {
         for (int i = 0; i < 4; i++) {
             choices[i] = getRandomWord();
+            while(!validChoice(choices[i]) && !validChoice(getMeaningFromWord(choices[i]))) {
+                choices[i] = getRandomWord();
+            }
         }
         int randomNumber = random.nextInt(4);
         setQuestion(getMeaningFromWord(choices[randomNumber]));
         setTrueAnswer(choices[randomNumber]);
+        setTrueAnsIndex(randomNumber);
     }
 
     public void initAudioQuiz() {
         for (int i = 0; i < 4; i++) {
             choices[i] = getRandomMeaning();
+            while(!validChoice(choices[i]) && !validChoice(getWordFromMeaning(choices[i]))) {
+                choices[i] = getRandomMeaning();
+            }
         }
         int randomNumber = random.nextInt(4);
         setQuestion(getWordFromMeaning(choices[randomNumber]));
         setTrueAnswer(choices[randomNumber]);
+        setTrueAnsIndex(randomNumber);
     }
 
     public void increaseScore() {
@@ -174,6 +191,14 @@ public class Quiz {
 
     public void setTrueAnswer(String trueAnswer) {
         this.trueAnswer = trueAnswer;
+    }
+
+    public void setTrueAnsIndex(int trueAnsIndex) {
+        this.trueAnsIndex = trueAnsIndex;
+    }
+
+    public int getTrueAnsIndex() {
+        return trueAnsIndex;
     }
 
     public int getTypeQuestion() {

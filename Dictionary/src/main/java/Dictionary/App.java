@@ -6,10 +6,20 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import Dictionary.Models.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class App extends Application {
     public static EnEnDictionary enenDictionary = EnEnDictionary.getInstance();
     public static EnViDictionary enviDictionary = EnViDictionary.getInstance();
+
+    public static ArrayList<EnViWord> wordlist;
+
+    public static Map<String, String> WordMapMean = new HashMap<>();
+    public static Map<String, String> MeanMapWord = new HashMap<>();
+
     @Override 
     public void start(Stage stage) {
         try {
@@ -31,6 +41,11 @@ public class App extends Application {
 
         enenDictionary.init();
         enviDictionary.init();
+        wordlist = EnViDictionary.getInstance().getAllWords();
+        for(EnViWord word :wordlist) {
+            WordMapMean.put(word.getWordTarget(), word.getDescription());
+            MeanMapWord.put(word.getDescription(), word.getWordTarget());
+        }
     }
 
     public static void main(String[] args) {

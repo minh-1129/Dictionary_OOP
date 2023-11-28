@@ -101,7 +101,7 @@ public class QuizSceneController implements Initializable {
             root.setAlignment(Pos.CENTER);
 
             Label mainLabel = new Label();
-            mainLabel.setText("Your Score \n        " + String.valueOf(quiz.getScores()));
+            mainLabel.setText("Your Score \n       " + String.valueOf(quiz.getScores()));
             mainLabel.getStyleClass().setAll("lead", "big-font");
 
             VBox buttonsVBox = new VBox(5);
@@ -173,6 +173,8 @@ public class QuizSceneController implements Initializable {
             selectedRadioButton.setStyle("-fx-background-color: green");
         } else {
             selectedRadioButton.setStyle("-fx-background-color: red");
+            RadioButton trueButton = List.of(mAnsA, mAnsB, mAnsC, mAnsD).get(quiz.getTrueAnsIndex());
+            trueButton.setStyle("-fx-background-color: green");
         }
 
     }
