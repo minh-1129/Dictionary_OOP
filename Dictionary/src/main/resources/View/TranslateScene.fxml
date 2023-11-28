@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
@@ -9,44 +10,56 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="780.0" styleClass="base-layout" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.TranslateSceneController">
    <children>
-      <AnchorPane layoutX="93.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="640.0" styleClass="api-bar" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="50.0">
+      <AnchorPane layoutX="70.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="680.0" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
          <children>
-            <ComboBox fx:id="targetLanguage" layoutX="560.0" layoutY="18.0" onAction="#translateTextInOutput" prefWidth="150.0" promptText="Target Language" styleClass="api-combobox" AnchorPane.bottomAnchor="12.5" AnchorPane.leftAnchor="410.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="12.5" />
-            <ComboBox fx:id="sourceLanguage" layoutX="102.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#translateTextInInput" prefWidth="150.0" promptText="Source Language" styleClass="api-combobox" AnchorPane.bottomAnchor="12.5" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="410.0" AnchorPane.topAnchor="12.5" />
-            <ImageView fx:id="btnSwap" fitHeight="35.0" fitWidth="35.0" layoutX="292.0" layoutY="8.0" onMouseClicked="#swap" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.5" AnchorPane.leftAnchor="302.5" AnchorPane.rightAnchor="302.5" AnchorPane.topAnchor="7.5">
-               <image>
-                  <Image url="@../Image/swap.png" />
-               </image>
-            </ImageView>
-
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="680.0" styleClass="api-bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ComboBox fx:id="targetLanguage" layoutX="560.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#translateTextInOutput" prefHeight="30.0" prefWidth="210.0" promptText="Target Language" styleClass="api-combobox" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="422.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="10.0" />
+                  <ComboBox fx:id="sourceLanguage" layoutX="68.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#translateTextInInput" prefHeight="30.0" prefWidth="210.0" promptText="Source Language" styleClass="api-combobox" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="422.0" AnchorPane.topAnchor="10.0" />
+                  <ImageView fx:id="btnSwap" fitHeight="35.0" fitWidth="35.0" layoutX="292.0" layoutY="8.0" onMouseClicked="#swap" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.5" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="318.0" AnchorPane.topAnchor="7.5">
+                     <image>
+                        <Image url="@../Image/swap.png" />
+                     </image>
+                  </ImageView>
+      
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="514.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" AnchorPane.bottomAnchor="43.5" AnchorPane.leftAnchor="430.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="126.5">
+      <AnchorPane layoutX="514.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 22px;" AnchorPane.bottomAnchor="43.5" AnchorPane.leftAnchor="430.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="126.5">
          <children>
-            <TextArea fx:id="outputText" layoutX="-5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TextArea fx:id="outputText" layoutX="-5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" styleClass="api-anchorpane" wrapText="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
                <font>
                   <Font size="20.0" />
                </font></TextArea>
-            <ImageView fx:id="speakerTextInOutput" fitHeight="35.0" fitWidth="35.0" layoutX="36.0" layoutY="200.0" onMouseClicked="#speakTextInOutput" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="360.0">
+            <ImageView fx:id="speakerTextInOutput" fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="387.0" onMouseClicked="#speakTextInOutput" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="264.0" AnchorPane.topAnchor="380.0">
                <image>
                   <Image url="@../Image/speaker.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="50.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30px;" AnchorPane.bottomAnchor="43.5" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="126.5">
+      <AnchorPane layoutX="50.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 22px;" AnchorPane.bottomAnchor="43.5" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="126.5">
          <children>
-            <TextArea fx:id="inputText" layoutX="45.0" layoutY="96.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#translate" prefHeight="300.0" prefWidth="310.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </TextArea>
-            <ImageView fx:id="speakerTextInInput" fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="351.0" onMouseClicked="#speakTextInInput" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="360.0">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="310.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextArea fx:id="inputText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#translate" prefHeight="400.0" prefWidth="310.0" wrapText="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="api-anchorpane" />
+                        <String fx:value="text-area" />
+                     </styleClass>
+                  </TextArea>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="speakerTextInInput" fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="351.0" onMouseClicked="#speakTextInInput" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="264.0" AnchorPane.topAnchor="380.0">
                <image>
                   <Image url="@../Image/speaker.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="recordVoice" fitHeight="35.0" fitWidth="35.0" layoutX="88.0" layoutY="190.0" onMouseClicked="#recordingVoiceAndTranslate" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="235.0" AnchorPane.topAnchor="360.0">
+            <ImageView fx:id="recordVoice" fitHeight="35.0" fitWidth="35.0" layoutX="88.0" layoutY="190.0" onMouseClicked="#recordingVoiceAndTranslate" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="235.0" AnchorPane.topAnchor="380.0">
                <image>
                   <Image url="@../Image/voice_recorder.png" />
                </image>

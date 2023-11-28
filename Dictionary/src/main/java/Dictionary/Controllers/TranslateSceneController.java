@@ -4,6 +4,7 @@ import Dictionary.Service.AudioManager;
 import Dictionary.Service.SpeechToTextAPI;
 import Dictionary.Service.TextToSpeech;
 import Dictionary.Service.TranslatorApi;
+import com.sun.javafx.font.PrismFontLoader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +17,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javazoom.jl.decoder.JavaLayerException;
 
 public class TranslateSceneController implements Initializable {
@@ -43,6 +46,10 @@ public class TranslateSceneController implements Initializable {
     targetLanguage.setItems(listTargetLanguage);
     sourceLanguage.setValue("Phát hiện ngôn ngữ");
     targetLanguage.setValue("Tiếng Việt");
+    //sourceLanguage.getEditor().setFont(Font.font("Arial", FontWeight.EXTRA_BOLD, 14));
+    //sourceLanguage.setStyle("-fx-font: 14px \"Arial\";");
+
+    //targetLanguage.setStyle("-fx-font: 14px \"Serif\";");
   }
 
   private String getLanguageCode(String language) {
