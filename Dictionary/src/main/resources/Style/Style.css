@@ -67,19 +67,19 @@
 }
 
 .tilte-label{
-  /*-fx-background-color: #3498db; /* Màu nền của label */
-  -fx-text-fill: black; /* Màu chữ của label */
-  -fx-font-family: "Arial"; /* Font chữ */
-  -fx-font-size: 14pt; /* Kích thước font chữ */
-  -fx-font-weight: bold; /* Độ đậm của font chữ */
+    /*-fx-background-color: #3498db; /* Màu nền của label */
+    -fx-text-fill: black; /* Màu chữ của label */
+    -fx-font-family: "Arial"; /* Font chữ */
+    -fx-font-size: 14pt; /* Kích thước font chữ */
+    -fx-font-weight: bold; /* Độ đậm của font chữ */
 }
 
 .content-label{
-  /*-fx-background-color: #3498db; /* Màu nền của label */
-  -fx-text-fill: black; /* Màu chữ của label */
-  -fx-font-family: "Arial"; /* Font chữ */
-  -fx-font-size: 14pt; /* Kích thước font chữ */
-  -fx-font-weight: bold; /* Độ đậm của font chữ */
+    /*-fx-background-color: #3498db; /* Màu nền của label */
+    -fx-text-fill: black; /* Màu chữ của label */
+    -fx-font-family: "Arial"; /* Font chữ */
+    -fx-font-size: 14pt; /* Kích thước font chữ */
+    -fx-font-weight: bold; /* Độ đậm của font chữ */
 }
 
 .text-fill1 {
@@ -101,6 +101,7 @@
     -fx-background-radius:  30px;
     -fx-text-fill:  #FFFFFF;
 }
+
 
 .radio-but {
     -fx-background-color: #f2e6be; /* Màu vàng */
