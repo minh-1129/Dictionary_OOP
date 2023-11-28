@@ -96,14 +96,18 @@
 }
 
 .api-bar {
-    -fx-background-color:  #5A48D9;
-    -fx-background-radius:  30px;
+    -fx-background-color:radial-gradient(center 50% 50%, radius 100%, #f2e6be, #faefe3);
+    -fx-background-radius:  20px;
 }
 
 .api-combobox {
-    -fx-background-color:  #5A48D9;
-    -fx-background-radius:  30px;
-    -fx-text-fill:  #FFFFFF;
+    -fx-background-color:radial-gradient(center 50% 50%, radius 100%, #f2e6be, #faefe3);
+    -fx-background-radius:  20px;
+    -fx-text-fill:  #114e48; /* Màu chữ của label */
+    -fx-font-family: "Arial"; /* Font chữ */
+    -fx-font-size: 10pt; /* Kích thước font chữ */
+    -fx-font-weight: bold; /* Độ đậm của font chữ */
+    -fx-text-alignment: center;
 }
 
 .radio-but {
@@ -143,4 +147,27 @@
 .function-but:pressed {
     -fx-padding: 5 10 8 10;
     -fx-background-insets: 2 0 0 0,2 0 3 0,2 0 4 0,2 0 5 0;
+}
+
+.api-anchorpane {
+    -fx-background-insets: 0;
+    -fx-background-color: #fff;
+    -fx-background-radius: 0, 0, 0, 0;
+
+    /*-fx-box-border: none;*/
+    -fx-focus-color: -fx-control-inner-background;
+    -fx-faint-focus-color: -fx-control-inner-background;
+    -fx-text-box-border: -fx-control-inner-background;
+    -fx-border-width: -1;
+}
+.text-area{
+    -fx-background-color: #fff;
+}
+
+.text-area .content {
+    -fx-background-color: #fff;
+}
+
+.text-area:focused .content {
+    -fx-background-color: #fff;
 }
