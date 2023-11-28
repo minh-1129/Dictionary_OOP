@@ -68,7 +68,7 @@
 
 .tilte-label{
   /*-fx-background-color: #3498db; /* Màu nền của label */
-  -fx-text-fill: black; /* Màu chữ của label */
+  -fx-text-fill: #333b33; /* Màu chữ của label */
   -fx-font-family: "Arial"; /* Font chữ */
   -fx-font-size: 14pt; /* Kích thước font chữ */
   -fx-font-weight: bold; /* Độ đậm của font chữ */
@@ -170,4 +170,17 @@
 
 .text-area:focused .content {
     -fx-background-color: #fff;
+}
+
+.btn-selected {
+    -fx-background-color:radial-gradient(center 50% 50%, radius 100%, #f2e6be, #faefe3);
+    -fx-text-fill: #333b33;
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+}
+
+.btn-margin-wrap-content {
+    -fx-padding: 15;
+    -fx-border-insets: 5;
+    -fx-background-insets: 5;
 }

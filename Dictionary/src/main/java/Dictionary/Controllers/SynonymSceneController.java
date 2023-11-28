@@ -48,6 +48,8 @@ public class SynonymSceneController {
         contentVBox.getChildren().clear();
         onSubmitSearchBtn();
       };
+      wordItem.getStyleClass().add("btn-selected");
+      wordItem.getStyleClass().add("btn-margin-wrap-content");
       wordItem.setOnAction(event);
       wordlistBox.getChildren().add(wordItem);
     }
