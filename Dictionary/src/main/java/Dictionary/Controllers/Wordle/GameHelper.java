@@ -319,6 +319,7 @@ public class GameHelper {
 
     public void getRandomWord() {
         winningWord = wordList.get(new Random().nextInt(wordList.size()));
+        System.out.println(winningWord);
     }
 
     private boolean binarySearch(ArrayList<String> list, String string) {

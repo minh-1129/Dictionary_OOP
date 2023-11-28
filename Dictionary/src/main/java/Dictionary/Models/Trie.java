@@ -65,7 +65,7 @@ public class Trie {
      * @param pCrawl
      * @param prefix
      */
-    private void ParseAllSubtrees(TrieNode pCrawl, String prefix) {
+    private void parseAllSubtrees(TrieNode pCrawl, String prefix) {
         if (pCrawl.isEndOfWord) {
             searchedWords.add(prefix);
         }
@@ -73,7 +73,7 @@ public class Trie {
         //DFS
         for (char curChar : pCrawl.children.keySet()) {
             if (pCrawl.children.get(curChar) != null) {
-                ParseAllSubtrees(pCrawl.children.get(curChar), prefix + curChar);
+                parseAllSubtrees(pCrawl.children.get(curChar), prefix + curChar);
             }
         }
     }
@@ -102,7 +102,7 @@ public class Trie {
             pCrawl = pCrawl.children.get(curChar);
         }
 
-        ParseAllSubtrees(pCrawl, prefix);
+        parseAllSubtrees(pCrawl, prefix);
 
         return getSearchedWords();
     }
