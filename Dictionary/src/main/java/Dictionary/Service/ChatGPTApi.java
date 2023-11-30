@@ -9,7 +9,12 @@ import java.net.URL;
 
 public class ChatGPTApi {
   public static void main(String[] args) {
-    System.out.println(chatGPT("Generate code C++ to sum two given integers"));
+    System.out.println(chatGPT("Me: What is string hashing" +
+    "You: The concept of string hashing and various hashing functions have been developed by multiple researchers and contributors in the field of computer science. It's challenging to attribute the invention of string hashing to a single individual because it has evolved over time with contributions from different people." +
+
+    "Hashing functions, in general, have been studied extensively in computer science, and their applications are diverse. Hash functions for strings are commonly used in data structures like hash tables to efficiently store and retrieve data." +
+    "Me: what are common functions" +
+    "continue to answer and do not repeat or add you at first"));
     // Prints out a response to the question.
   }
 
@@ -39,7 +44,7 @@ public class ChatGPTApi {
       String inputLine;
       StringBuffer response = new StringBuffer();
       while ((inputLine = in.readLine()) != null) {
-        response.append(inputLine);
+        response.append(inputLine + "\n");
       }
       in.close();
 
