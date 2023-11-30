@@ -127,9 +127,9 @@
                            <children>
                               <Button fx:id="mChatBot" layoutX="6.0" layoutY="5.0999755859375" mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" styleClass="test-but" stylesheets="@../Style/Style.css" text="   ChatBot    " textFill="#f6f0f0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                                  <graphic>
-                                    <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="38.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../Image/setting.png" />
+                                          <Image url="@../Image/icons8-chatbot-30.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>

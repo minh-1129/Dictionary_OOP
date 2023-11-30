@@ -42,7 +42,7 @@
          <children>
             <VBox layoutX="16.0" layoutY="7.0" prefHeight="476.0" prefWidth="247.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
                <children>
-                  <ListView fx:id="searchResultsListView" onMouseClicked="#clickSelectWord" prefHeight="486.0" prefWidth="247.0" stylesheets="@../Style/Style.css" />
+                  <ListView fx:id="searchResultsListView" onMouseClicked="#clickSelectWord" prefHeight="486.0" prefWidth="247.0" styleClass="pane-white2" stylesheets="@../Style/Style.css" />
                </children>
             </VBox>
          </children>
@@ -54,9 +54,9 @@
                <children>
                   <Button fx:id="deleteButton" layoutX="4.0999908447265625" layoutY="3.0999999046325684" mnemonicParsing="false" onMouseClicked="#deleteWord" prefHeight="43.0" prefWidth="100.0" styleClass="test-but" stylesheets="@../Style/Style.css">
                      <graphic>
-                        <ImageView fitHeight="39.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Image/icons8-delete-48%20(1).png" />
+                              <Image url="@../Image/icons8-delete-24.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -83,9 +83,9 @@
                <children>
                   <Button fx:id="pronounceButton" layoutX="4.100006103515625" layoutY="3.0999999046325684" mnemonicParsing="false" onMouseClicked="#playSound" prefHeight="43.0" prefWidth="100.0" styleClass="test-but" stylesheets="@../Style/Style.css">
                      <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Image/icons8-fix-48%20(1).png" />
+                              <Image url="@../Image/icons8-fix-48.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -96,9 +96,9 @@
                <children>
                   <Button layoutX="4.100006103515625" layoutY="3.0999999046325684" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" styleClass="test-but" stylesheets="@../Style/Style.css">
                      <graphic>
-                        <ImageView fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="49.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Image/soundquiz.png" />
+                              <Image url="@../Image/icons8-sound-50%20(1).png" />
                            </image>
                         </ImageView>
                      </graphic>
