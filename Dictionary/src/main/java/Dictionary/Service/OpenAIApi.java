@@ -32,6 +32,8 @@ public class OpenAIApi {
 
   public static void main(String[] args) throws Exception {
     //chatGPT("Bạn biết ai là người vĩ đại nhất Việt Nam khôngq");
-    chatGPT("Generate code C++ to sum two given integers");
+    chatGPT("\"role\": \"system\", \"content\": \"You are a helpful assistant.\"},\n" +
+            "    {\"role\": \"user\", \"content\": \"What's the weather like today?\"},\n" +
+            "    {\"role\": \"assistant\", \"content\": \"I'm sorry, I cannot provide real-time weather information.\"},");
   }
 }
