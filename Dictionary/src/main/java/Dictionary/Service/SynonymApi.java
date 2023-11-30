@@ -4,18 +4,19 @@ package Dictionary.Service;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
 import org.apache.commons.text.StringEscapeUtils;
 import org.json.JSONObject;
 
-public class SynonymApi {
+public class SynonymApi implements API {
   public static JSONObject getSynonymList (String word) {
     try {
       String apiUrl = "https://api.api-ninjas.com/v1/thesaurus?word=" + word;
       String apiKey = "BIf0OcLCKvXdfEJ+ZoBE9A==c0EsICN5G5nEQGra";
-      URL url = new URL(apiUrl);
-      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+      URL url = API.createURL(apiUrl);
+      HttpURLConnection connection = API.openConnection(url);
       connection.setRequestMethod("GET");
       connection.setRequestProperty("X-Api-Key", apiKey);
 

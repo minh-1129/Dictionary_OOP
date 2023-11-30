@@ -6,15 +6,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import org.json.JSONObject;
 
-public class OpenAIApi {
+public class OpenAIApi implements API {
   public static void chatGPT(String text) throws Exception {
-    String url = "https://api.openai.com/v1/completions";
-    HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
-
+    String linkUrl = "https://api.openai.com/v1/completions";
+    URL url = API.createURL(linkUrl);
+    HttpURLConnection con = API.openConnection(url);
     con.setRequestMethod("POST");
     con.setRequestProperty("Content-Type", "application/json");
     con.setRequestProperty("Authorization", "Bearer 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");
-
     JSONObject data = new JSONObject();
     data.put("model", "text-davinci-003");
     data.put("prompt", text);
