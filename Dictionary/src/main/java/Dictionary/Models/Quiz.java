@@ -44,16 +44,6 @@ public class Quiz {
         return startTime;
     }
 
-
-    public String endQuiz() {
-        return "Your score: " + scores;
-    }
-
-    public String correctAnswer() {
-
-        return "Correct answer: " + trueAnswer;
-    }
-
     public String generateQuestion() {
         switch (QuestionType.values()[typeQuestion]) {
             case Meaning:
