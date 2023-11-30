@@ -8,6 +8,7 @@ module com.example.dictionary {
   requires org.json;
   requires org.apache.commons.text;
   requires java.desktop;
+  requires string.similarity;
 
   opens Dictionary to javafx.fxml;
     exports Dictionary;

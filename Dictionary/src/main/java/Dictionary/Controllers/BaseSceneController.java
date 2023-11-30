@@ -39,7 +39,7 @@ public class BaseSceneController implements Initializable {
         mSetting.setOnAction(event -> showComponent("/View/SettingScene.fxml"));
         //mSetting.setOnAction(event -> showComponentSetting("/View/SettingScene.fxml"));
         mAdd.setOnAction(event -> showComponentAdd());
-        mQuiz.setOnAction(event -> showComponent("/View/QuizScene.fxml") );
+        mQuiz.setOnAction(event -> showComponentQuiz() );
         mSynonym.setOnAction(event -> showComponent("/View/SynonymScene.fxml") );
         mChatBot.setOnAction(event -> showComponent("/View/ChatBotScene.fxml"));
     }
@@ -71,6 +71,15 @@ public class BaseSceneController implements Initializable {
             showComponent("/View/AddWordSceneEn.fxml");
         } else {
             showComponent("/View/AddWordSceneVi.fxml");
+        }
+    }
+
+    @FXML
+    public void showComponentQuiz() {
+        if(SettingSceneController.getQuizMode() == SettingSceneController.Quiz) {
+            showComponent("/View/QuizScene.fxml");
+        } else {
+            showComponent("/View/PracticeEnglishScene.fxml");
         }
     }
 }

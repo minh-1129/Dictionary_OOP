@@ -26,7 +26,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <TextField fx:id="searchBox" layoutX="14.0" layoutY="6.0" onKeyPressed="#prepareSearchList" onKeyReleased="#prepareSearchList" prefHeight="35.0" prefWidth="190.0" styleClass="text-fill2" stylesheets="@../Style/Style.css" />
+            <TextField fx:id="searchBox" layoutX="14.0" layoutY="6.0" onKeyPressed="#prepareSearchList" onKeyReleased="#prepareSearchList" prefHeight="35.0" prefWidth="190.0" promptText="Fill your word" styleClass="text-fill2" stylesheets="@../Style/Style.css" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="330.0" layoutY="100.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 0.5cm;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="90.0">
@@ -49,47 +49,62 @@
       </AnchorPane>
       <HBox layoutX="287.0" layoutY="21.0" prefHeight="35.0" prefWidth="477.0" AnchorPane.bottomAnchor="520.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
          <children>
-            <Label prefHeight="44.0" prefWidth="308.0" styleClass="tilte-label" stylesheets="@../Style/Style.css" text="Fill your word" textFill="#112e69" />
-            <Button fx:id="deleteButton" mnemonicParsing="false" onMouseClicked="#deleteWord" prefHeight="43.0" prefWidth="53.0" styleClass="test-but" stylesheets="@../Style/Style.css">
-               <graphic>
-                  <ImageView fitHeight="39.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Image/icons8-delete-48%20(1).png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <textFill>
-                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.4912280738353729" green="0.17769114673137665" blue="0.09096816182136536" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </RadialGradient>
-               </textFill></Button>
-            <Button fx:id="pronounceButton" mnemonicParsing="false" onMouseClicked="#playSound" prefHeight="43.0" prefWidth="56.0" styleClass="test-but" stylesheets="@../Style/Style.css">
-               <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Image/icons8-fix-48%20(1).png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="56.0" styleClass="test-but" stylesheets="@../Style/Style.css">
-               <graphic>
-                  <ImageView fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Image/soundquiz.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
+            <Label prefHeight="44.0" prefWidth="180.0" styleClass="tilte-label" stylesheets="@../Style/Style.css" textFill="#112e69" />
+            <AnchorPane>
+               <children>
+                  <Button fx:id="deleteButton" layoutX="4.0999908447265625" layoutY="3.0999999046325684" mnemonicParsing="false" onMouseClicked="#deleteWord" prefHeight="43.0" prefWidth="100.0" styleClass="test-but" stylesheets="@../Style/Style.css">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/icons8-delete-48%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.4912280738353729" green="0.17769114673137665" blue="0.09096816182136536" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Button fx:id="pronounceButton" layoutX="4.100006103515625" layoutY="3.0999999046325684" mnemonicParsing="false" onMouseClicked="#playSound" prefHeight="43.0" prefWidth="100.0" styleClass="test-but" stylesheets="@../Style/Style.css">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/icons8-fix-48%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Button layoutX="4.100006103515625" layoutY="3.0999999046325684" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" styleClass="test-but" stylesheets="@../Style/Style.css">
+                     <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/soundquiz.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
          </children>
       </HBox>
    </children>
