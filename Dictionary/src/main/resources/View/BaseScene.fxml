@@ -2,31 +2,170 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0E68C;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.BaseSceneController">
+<AnchorPane prefHeight="550.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.BaseSceneController">
    <children>
-      <AnchorPane layoutX="106.0" layoutY="15.0" prefHeight="371.0" prefWidth="472.0" style="-fx-background-color: #FFE4B5;">
-         <effect>
-            <DropShadow />
-         </effect>
-      </AnchorPane>
-      <AnchorPane layoutX="17.0" layoutY="13.0" prefHeight="371.0" prefWidth="65.0" style="-fx-background-color: #FFE4B5;">
-         <children>
-            <Button fx:id="mSearch" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Search" />
-            <Button fx:id="mTranslate" layoutY="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Translate" />
-            <Button fx:id="mGame" layoutX="1.0" layoutY="170.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Game" />
-            <Button fx:id="mSetting" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Setting" />
-            <Button fx:id="mExit" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Exit" />
-         </children>
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color red="0.1811949461698532" green="0.2017543911933899" blue="0.025530647486448288" />
-               </color>
-            </DropShadow>
-         </effect>
-      </AnchorPane>
+      <BorderPane prefHeight="550.0" prefWidth="733.0">
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="155.0" styleClass="main-background" stylesheets="@../Style/Style.css" BorderPane.alignment="CENTER">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <AnchorPane prefHeight="80.0" prefWidth="57.0">
+                     <children>
+                        <ImageView fitHeight="51.0" fitWidth="49.0" layoutX="51.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="18.0">
+                           <image>
+                              <Image url="@../Image/tilte.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <VBox alignment="TOP_CENTER" prefHeight="524.0" prefWidth="155.0">
+                     <children>
+                        <AnchorPane prefHeight="60.0">
+                           <children>
+                              <Button fx:id="mSearch" layoutX="6.099999904632568" layoutY="5.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="152.0" styleClass="test-but" stylesheets="@../Style/Style.css" text="   Searching " textFill="#fbf6f6" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/search.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <Button fx:id="mAdd" layoutX="6.0" layoutY="5.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" styleClass="test-but" stylesheets="@../Style/Style.css" text="    Add Word" textFill="#f4eded" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <Button fx:id="mTranslate" layoutX="6.0" layoutY="5.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" styleClass="test-but" stylesheets="@../Style/Style.css" text="    Translate  " textFill="#f6eeee" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/translate.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <Button fx:id="mGame" layoutX="6.099999904632568" layoutY="5.100006103515625" mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" styleClass="test-but" stylesheets="@../Style/Style.css" text="    Game       " textFill="#f8f4f4" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <graphic>
+                                    <ImageView fitHeight="39.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/game.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <Button fx:id="mQuiz" layoutX="6.0" layoutY="5.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" styleClass="test-but" stylesheets="@../Style/Style.css" text="   Quiz          " textFill="#f6f0f0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <graphic>
+                                    <ImageView fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/quiz.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="60.0" prefWidth="155.0">
+                           <Button fx:id="mSynonym" mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" styleClass="test-but" text="    Synonym  " textFill="#f6f0f0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                              <graphic>
+                                 <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@../Image/synonym.png" />
+                                    </image>
+                                 </ImageView>
+                              </graphic>
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Button>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <Button fx:id="mChatBot" layoutX="6.0" layoutY="5.0999755859375" mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" styleClass="test-but" stylesheets="@../Style/Style.css" text="   ChatBot    " textFill="#f6f0f0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <graphic>
+                                    <ImageView fitHeight="38.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/icons8-chatbot-30.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <Button fx:id="mSetting" layoutX="6.0" layoutY="5.0999755859375" mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" styleClass="test-but" stylesheets="@../Style/Style.css" text="    Setting     " textFill="#f6f0f0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/setting.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="base-background" stylesheets="@../Style/Style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="mainLayout" prefHeight="200.0" prefWidth="200.0" styleClass="base-layout" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>

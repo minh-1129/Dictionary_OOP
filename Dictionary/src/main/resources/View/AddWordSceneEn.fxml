@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="780.0" styleClass="base-layout" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.AddWordEnController">
+   <children>
+      <AnchorPane layoutX="45.0" layoutY="29.0" prefHeight="40.0" prefWidth="310.0" styleClass="word-fill-pane" AnchorPane.bottomAnchor="520.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <TextField fx:id="mWordTarget" layoutX="10.0" layoutY="20.0" onKeyReleased="#findIfInDatabase" prefHeight="40.0" prefWidth="229.0" styleClass="text-fill2" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="1.0" />
+            <Button fx:id="addButton" layoutX="265.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#Add" onMousePressed="#Add" onMouseReleased="#Add" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: .word-fill-pane {    -fx-background-radius: 1cm;    -fx-background-color: #f2e6be;};" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="1.0">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/addbar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="33.0" layoutY="90.0" prefHeight="93.0" prefWidth="320.0" styleClass="word-fill-pane2" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <TextField fx:id="mPronunciation" layoutX="71.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill3" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="14.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Pronunciation" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="425.0" layoutY="90.0" prefHeight="93.0" prefWidth="320.0" styleClass="word-fill-pane2" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <TextField fx:id="mType" layoutX="71.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill3" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="15.0" layoutY="2.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Type" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="68.0" layoutY="192.0" prefHeight="93.0" prefWidth="320.0" styleClass="word-fill-pane2" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="320.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <TextField fx:id="mSynonyms" layoutX="64.0" layoutY="28.0" prefHeight="40.0" prefWidth="300.0" styleClass="text-fill3" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="15.0" layoutY="12.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" stylesheets="@../Style/Style.css" text="Synonyms" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="425.0" layoutY="192.0" prefHeight="93.0" prefWidth="320.0" styleClass="word-fill-pane2" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="320.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <TextField fx:id="mAntonyms" layoutX="80.0" layoutY="28.0" prefHeight="38.0" prefWidth="300.0" styleClass="text-fill3" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="15.0" layoutY="7.0" prefHeight="40.0" prefWidth="290.0" styleClass="content-label" text="Antonyms" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="68.0" layoutY="348.0" prefHeight="137.0" prefWidth="200.0" styleClass="word-fill-pane2" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="300.0">
+         <children>
+            <TextArea fx:id="mMeaning" layoutX="53.0" layoutY="19.0" prefHeight="137.0" prefWidth="200.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+            <Label layoutX="15.0" layoutY="10.0" prefHeight="33.0" prefWidth="290.0" styleClass="content-label" text="Meaning">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="418.0" layoutY="350.0" prefHeight="124.0" prefWidth="200.0" styleClass="word-fill-pane2" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="300.0">
+         <children>
+            <TextArea fx:id="mExample" layoutX="39.0" layoutY="35.0" prefHeight="185.0" prefWidth="310.0" styleClass="text-fill2" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+            <Label layoutX="15.0" layoutY="9.0" prefHeight="40.0" prefWidth="290.0" styleClass="content-label" text="Example">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

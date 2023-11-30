@@ -5,18 +5,18 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Trie {
-    private static TrieNode root = new TrieNode();
+    private TrieNode root = new TrieNode();
 
-    private static ArrayList<String> searchedWords = new ArrayList<>();
+    private ArrayList<String> searchedWords = new ArrayList<>();
 
-    public static ArrayList<String> getSearchedWords() {
+    public ArrayList<String> getSearchedWords() {
         return searchedWords;
     }
     /**
      * insert a word into trie
      * @param target
      */
-    public static void insert(String target) {
+    public void insert(String target) {
         TrieNode pCrawl = root;
 
         int length = target.length();
@@ -37,7 +37,7 @@ public class Trie {
      * delete word from Trie
      * @param target
      */
-    public static void delete(String target) {
+    public void delete(String target) {
         TrieNode pCrawl = root;
 
         int length = target.length();
@@ -65,7 +65,7 @@ public class Trie {
      * @param pCrawl
      * @param prefix
      */
-    private static void ParseAllSubtrees(TrieNode pCrawl, String prefix) {
+    private void parseAllSubtrees(TrieNode pCrawl, String prefix) {
         if (pCrawl.isEndOfWord) {
             searchedWords.add(prefix);
         }
@@ -73,7 +73,7 @@ public class Trie {
         //DFS
         for (char curChar : pCrawl.children.keySet()) {
             if (pCrawl.children.get(curChar) != null) {
-                ParseAllSubtrees(pCrawl.children.get(curChar), prefix + curChar);
+                parseAllSubtrees(pCrawl.children.get(curChar), prefix + curChar);
             }
         }
     }
@@ -83,7 +83,7 @@ public class Trie {
      * @param prefix
      * @return list of strings
      */
-    public static ArrayList<String> search(String prefix) {
+    public ArrayList<String> search(String prefix) {
         if (prefix.isEmpty()) {
             return new ArrayList<>();
         }
@@ -102,7 +102,7 @@ public class Trie {
             pCrawl = pCrawl.children.get(curChar);
         }
 
-        ParseAllSubtrees(pCrawl, prefix);
+        parseAllSubtrees(pCrawl, prefix);
 
         return getSearchedWords();
     }
