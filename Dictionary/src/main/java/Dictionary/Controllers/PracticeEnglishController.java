@@ -23,6 +23,10 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javazoom.jl.decoder.JavaLayerException;
+import net.ricecode.similarity.LevenshteinDistanceStrategy;
+import net.ricecode.similarity.SimilarityStrategy;
+import net.ricecode.similarity.StringSimilarityService;
+import net.ricecode.similarity.StringSimilarityServiceImpl;
 
 public class PracticeEnglishController implements Initializable {
     @FXML
@@ -124,16 +128,20 @@ public class PracticeEnglishController implements Initializable {
     public String getTextAnswer() {
         if (mTextArea == null || mTextArea.getText().isBlank()) {
             System.out.println("Please answer");
-//      SimilarityStrategy strategy = new JaroWinklerStrategy();
-//      String target = "McDonalds";
-//      String source = "MacMahons";
-//      StringSimilarityService service = new StringSimilarityServiceImpl(strategy);
-       //     double score = service.score(source, target); // S
             mScore.setText("0");
             return "Please answer";
         } else {
-            System.out.println(mTextArea.getText());
-            mScore.setText("100");
+            System.out.println(questions);
+            String answer = mTextArea.getText();
+            System.out.println(answer);
+            SimilarityStrategy strategy = new LevenshteinDistanceStrategy();
+            StringSimilarityService service = new StringSimilarityServiceImpl(strategy);
+            String questionConvertToLowerCase = questions.toLowerCase();
+            double score = service.score(questionConvertToLowerCase, answer.toLowerCase());
+            int rounded_score = (int)(score * 100);
+            System.out.println(score);
+            System.out.println(rounded_score);
+            mScore.setText(String.valueOf(rounded_score));
             return mTextArea.getText();
         }
     }
