@@ -39,7 +39,7 @@ public class PracticeEnglishController implements Initializable {
     private Label mScore;
     @FXML
     private Button mNext, playAudio;
-    List<String> allQuestions = new ArrayList<>(List.of("Hi, nice to meet you", "Where are you from", "My favorite footballer is Ronaldo", "Do you know Viet Nam- a beautiful country"));
+    List<String> allQuestions = new ArrayList<>(List.of("Hi, nice to meet you", "Where are you from", "My favorite footballer is Ronaldo", "Do you know Vietnam is a beautiful country"));
     private String questions;
     private int numberQuestions = 0;
 
@@ -90,45 +90,13 @@ public class PracticeEnglishController implements Initializable {
     }
 
     public void handleSubmit(ActionEvent event) {
-        if (getNumberQuestions() == 5) {
-            Stage stage = new Stage();
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.initStyle(StageStyle.UTILITY);
-            stage.setMaxWidth(500);
-            stage.setMaxHeight(460);
-
-            VBox root = new VBox(15);
-            root.setAlignment(Pos.CENTER);
-            VBox buttonsVBox = new VBox(5);
-            buttonsVBox.setAlignment(Pos.CENTER);
-
-            Button playAgainButton = new Button("PLAY AGAIN");
-            playAgainButton.setOnMouseClicked(me -> {
-                setNumberQuestions(0);
-                start();
-                stage.close();
-            });
-
-            Button quitButton = new Button("  QUIT");
-            quitButton.setOnMouseClicked(me -> {
-                stage.close();
-            });
-
-            buttonsVBox.getChildren().addAll(playAgainButton, quitButton);
-            Scene scene = new Scene(root, 300, 260);
-            stage.setScene(scene);
-            stage.showAndWait();
-        } else {
-            start();
-        }
-
-
+        start();
     }
 
     public String getTextAnswer() {
         if (mTextArea == null || mTextArea.getText().isBlank()) {
             System.out.println("Please answer");
-            mScore.setText("0");
+            mScore.setText("0 / 100");
             return "Please answer";
         } else {
             System.out.println(questions);
@@ -141,7 +109,7 @@ public class PracticeEnglishController implements Initializable {
             int rounded_score = (int)(score * 100);
             System.out.println(score);
             System.out.println(rounded_score);
-            mScore.setText(String.valueOf(rounded_score));
+            mScore.setText(String.valueOf(rounded_score) + " / 100");
             return mTextArea.getText();
         }
     }

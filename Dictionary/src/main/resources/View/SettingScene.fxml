@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="570.0" prefWidth="780.0" styleClass="base-layout" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.SettingSceneController">
    <children>
-      <ChoiceBox fx:id="mTransModeChoice" layoutX="49.0" layoutY="59.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="mQuizModeChoice" layoutX="281.0" layoutY="59.0" prefWidth="150.0" />
+      <AnchorPane layoutX="160.0" layoutY="106.0" prefHeight="17.0" prefWidth="387.0" styleClass="setting-pane" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label text="                  Setting Dictionary Mode" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="150.0" layoutY="200.0" prefHeight="280.0" prefWidth="600.0" styleClass="setting-pane" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <ChoiceBox fx:id="mQuizModeChoice" layoutX="50.0" layoutY="198.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" />
+            <ChoiceBox fx:id="mTransModeChoice" layoutX="350.0" layoutY="198.0" prefHeight="25.0" prefWidth="200.0" />
+            <ImageView fitHeight="166.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+               <image>
+                  <Image url="@../Image/QuizMode.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="145.0" fitWidth="200.0" layoutX="350.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="36.0">
+               <image>
+                  <Image url="@../Image/AddMode.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -36,7 +36,7 @@ public class ChatBotController {
                 sendButton.setDisable(true);
                 messageBox.setText("");
                 messageBox.setDisable(true);
-                addMsg(new Image(ChatBotController.class.getResource("/Image/add.png").toString()),
+                addMsg(new Image(ChatBotController.class.getResource("/Image/user.png").toString()),
                         msg + "\n" + currentTime(),
                         false
                 );
@@ -45,7 +45,7 @@ public class ChatBotController {
             Thread botThread = new Thread(() -> {
                 Platform.runLater(() -> {
                     String answer = response(msg) + "\n" + currentTime();
-                    this.addMsg(new Image(ChatBotController.class.getResource("/Image/game.png").toString()),
+                    this.addMsg(new Image(ChatBotController.class.getResource("/Image/chatbot.png").toString()),
                             answer,
                             true
                     );

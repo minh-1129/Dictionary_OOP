@@ -9,11 +9,11 @@ import java.util.ResourceBundle;
 import java.net.URL;
 
 public class SettingSceneController implements Initializable{
-    public static final String ENEN = "ENEN", ENVI = "ENVI";
+    public static final String ENEN = "Add Type English - English", ENVI = "Add Type English - Vietnamese";
     private static String transMode = ENVI;
     private String[] choicesTrans = {ENEN, ENVI};
 
-    public static final String Quiz = "Quiz", LisPrac = "LisPrac";
+    public static final String Quiz = "Playing multiple-choice Quiz   ", LisPrac = "Practice Listening Skill";
     private static String QuizMode = Quiz;
     private String[] choicesQuiz = {Quiz, LisPrac};
 
