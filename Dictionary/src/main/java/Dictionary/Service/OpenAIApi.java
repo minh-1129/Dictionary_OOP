@@ -7,7 +7,7 @@ import java.net.URL;
 import org.json.JSONObject;
 
 public class OpenAIApi implements API {
-  public static void chatGPT(String text) throws Exception {
+  public static String chatGPT(String text) throws Exception {
     String linkUrl = "https://api.openai.com/v1/completions";
     URL url = API.createURL(linkUrl);
     HttpURLConnection con = API.openConnection(url);
@@ -26,7 +26,7 @@ public class OpenAIApi implements API {
     String output = new BufferedReader(new InputStreamReader(con.getInputStream())).lines()
         .reduce((a, b) -> a + b).get();
 
-    System.out.println(new JSONObject(output).getJSONArray("choices").getJSONObject(0).getString("text"));
+    return new JSONObject(output).getJSONArray("choices").getJSONObject(0).getString("text");
   }
 
   public static void main(String[] args) throws Exception {

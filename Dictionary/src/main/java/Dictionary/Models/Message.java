@@ -83,7 +83,6 @@ public class Message extends AnchorPane{
     public void changeOrientation(){
         if(this.getScaleX() == 1){
             this.setScaleX(-1);
-
             this.messageLabel.setScaleX(-1);
             this.messageLabel.setAlignment(Pos.BASELINE_RIGHT);
             this.messageLabel.setPadding(new Insets(6));

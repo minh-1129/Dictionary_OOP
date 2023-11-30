@@ -33,7 +33,7 @@ public class AddWordViController {
     public void reset() {
         mDescription.setText("");
         mPronunciation.setText("");
-
+        htmlEditor.setHtmlText("");
     }
 
     public boolean findIfInDatabase() {
