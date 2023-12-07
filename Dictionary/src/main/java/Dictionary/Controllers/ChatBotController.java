@@ -1,5 +1,6 @@
 package Dictionary.Controllers;
 
+import Dictionary.Helpers.StringUtils;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
@@ -12,7 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import Dictionary.Models.Message;
-import Dictionary.Service.ChatGPTApi;
+import Dictionary.Service.OpenAIApi;
 public class ChatBotController {
 
     @FXML
@@ -29,7 +30,7 @@ public class ChatBotController {
     String prompt = "";
 
     public void onSendButtonPressed() {
-        String msg = messageBox.getText();
+        String msg = StringUtils.normalizeUserMsg(messageBox.getText());
         if (!msg.trim().isEmpty()) {
 
             Thread userThread = new Thread(() -> {
@@ -44,7 +45,7 @@ public class ChatBotController {
 
             Thread botThread = new Thread(() -> {
                 Platform.runLater(() -> {
-                    String answer = response(msg) + "\n" + currentTime();
+                    String answer = StringUtils.normalizeChatResponse(response(msg)) + "\n" + currentTime();
                     this.addMsg(new Image(ChatBotController.class.getResource("/Image/chatbot.png").toString()),
                             answer,
                             true
@@ -77,7 +78,13 @@ public class ChatBotController {
     }
 
     public String response(String text) {
-        String response = ChatGPTApi.chatGPT(text);
-        return response;
+        try {
+            String response = OpenAIApi.chatGPT(text);
+            return response;
+        } catch (Exception e) {
+            System.out.println("Error in chatbot response");
+            e.printStackTrace();
+        }
+        return null;
     }
 }
